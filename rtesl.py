@@ -7,6 +7,7 @@ import os
 
 CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
 CARD_DATABASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
+CARD_NOT_FOUND_URL = 'http://www.legends-decks.com/404.php'
 
 
 def find_card_mentions(s):
@@ -20,9 +21,12 @@ def build_response(cards):
         url = CARD_DATABASE_URL.format(card_name)
         # Check if the given card is a valid card
         try:
-            urllib.request.urlopen(url)
+            res = urllib.request.urlopen(url)
+            if res.geturl() == CARD_NOT_FOUND_URL:
+                response += '{}: This card does not seem to exit. Possible typo?'
+                continue
         except urllib.error.HTTPError as e:
-            response += '{}: The server gave me error #{} for this one.\n\n'.format(card, e.code)
+            response += '{}: The server gave me status code #{} for this one.\n\n'.format(card, e.code)
         except urllib.error.URLError as e:
             print('Uh-oh! Server issues!')
             exit()
