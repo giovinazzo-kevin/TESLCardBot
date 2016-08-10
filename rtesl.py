@@ -14,9 +14,15 @@ def find_card_mentions(s):
 
 
 def build_response(cards):
+    already_mentioned = []
+
     response = 'Here are the cards you mentioned: \n\n'
     for card in cards:
         card_name = re.sub(r'[\s_\-"\',;]', '', card).lower()
+        if card_name in already_mentioned:
+            continue
+        already_mentioned.append(card_name)
+
         url = CARD_DATABASE_URL.format(card_name)
         # Check if the given card is a valid card
         r = requests.get(url)
