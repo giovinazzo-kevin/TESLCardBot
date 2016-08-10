@@ -39,9 +39,6 @@ def reply_to(c, cards):
     c.reply(response)
 
 
-def already_replied_to(c):
-    return
-
 if __name__ == '__main__':
     r = praw.Reddit('TES:L Card Fetcher by /u/G3Kappa. ')
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
