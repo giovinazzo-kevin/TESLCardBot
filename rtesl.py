@@ -9,19 +9,24 @@ CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
 CARD_DATABASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
 
 
+def _remove_duplicates(seq):
+    seen = set()
+    seen_add = seen.add
+    return [x for x in seq if not (x in seen or seen_add(x))]
+
+
 def find_card_mentions(s):
-    return CARD_MENTION_REGEX.findall(s)
+    return _remove_duplicates(CARD_MENTION_REGEX.findall(s))
+
+
+def normalize_card_name(card):
+    return re.sub(r'[\s_\-"\',;]', '', card).lower()
 
 
 def build_response(cards):
-    already_mentioned = []
-
     response = 'Here are the cards you mentioned: \n\n'
     for card in cards:
-        card_name = re.sub(r'[\s_\-"\',;]', '', card).lower()
-        if card_name in already_mentioned:
-            continue
-        already_mentioned.append(card_name)
+        card_name = normalize_card_name(card)
 
         url = CARD_DATABASE_URL.format(card_name)
         # Check if the given card is a valid card
@@ -49,14 +54,14 @@ if __name__ == '__main__':
     print('TESLCardBot started!')
 
     streams = itertools.chain(praw.helpers.comment_stream(r, 'elderscrollslegends'),
-              praw.helpers.submission_stream(r, 'elderscrollslegends'))
+                              praw.helpers.submission_stream(r, 'elderscrollslegends'))
 
     for s in streams:
         cards = find_card_mentions(s.body)
         if len(cards) > 0 and not s.saved:
             try:
                 reply_to(s, cards)
-                s.save() # Exploiting Reddit's servers has never been this easy!
+                s.save()  # Exploiting Reddit's servers has never been this easy!
+                print('Done replying and saved post. ({})'.format(s.id))
             except:
                 print('There was an error while trying to reply to: {}.'.format(s.id))
-            print('Done replying and saved post. ({})'.format(s.id))
