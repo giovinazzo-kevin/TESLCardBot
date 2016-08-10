@@ -1,4 +1,4 @@
-import urllib.request, urllib.error
+import requests
 import itertools
 import praw
 import re
@@ -7,7 +7,6 @@ import os
 
 CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
 CARD_DATABASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
-CARD_NOT_FOUND_URL = 'http://www.legends-decks.com/404.php'
 
 
 def find_card_mentions(s):
@@ -20,18 +19,11 @@ def build_response(cards):
         card_name = re.sub(r'[\s_\-"\']', '', card).lower()
         url = CARD_DATABASE_URL.format(card_name)
         # Check if the given card is a valid card
-        try:
-            res = urllib.request.urlopen(url)
-            if res.geturl() == CARD_NOT_FOUND_URL:
-                response += '{}: This card does not seem to exit. Possible typo?'
-                continue
-        except urllib.error.HTTPError as e:
-            response += '{}: The server gave me status code #{} for this one.\n\n'.format(card, e.code)
-        except urllib.error.URLError as e:
-            print('Uh-oh! Server issues!')
-            exit()
-        else:
+        r = requests.get(url)
+        if r.headers['content-type'] == 'image/png':
             response += '- [{}]({})\n\n'.format(card, url)
+        else:
+            response += '{}: This card does not seem to exist. Possible typo?'
     response += '\n\n_I am a bot, and this action was performed automatically. ' \
                 'For info or to submit a bug report, please contact /u/G3Kappa._'
     return response
