@@ -23,7 +23,7 @@ def build_response(cards):
         if r.headers['content-type'] == 'image/png':
             response += '- [{}]({})\n\n'.format(card, url)
         else:
-            response += '{}: This card does not seem to exist. Possible typo?'
+            response += '{}: This card does not seem to exist. Possible typo?'.format(card)
     response += '\n\n_I am a bot, and this action was performed automatically. ' \
                 'For info or to submit a bug report, please contact /u/G3Kappa._'
     return response
