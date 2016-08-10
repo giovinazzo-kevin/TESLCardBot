@@ -42,8 +42,8 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started!')
 
-    streams = itertools.chain(praw.helpers.comment_stream(r, 'fieropa'),
-              praw.helpers.submission_stream(r, 'fieropa'))
+    streams = itertools.chain(praw.helpers.comment_stream(r, 'elderscrollslegends'),
+              praw.helpers.submission_stream(r, 'elderscrollslegends'))
 
     for s in streams:
         cards = find_card_mentions(s.body)
