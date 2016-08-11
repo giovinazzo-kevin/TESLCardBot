@@ -64,6 +64,7 @@ def get_stream():
         return itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
                                praw.helpers.submission_stream(r, TARGET_SUBREDDIT))
     else:
+        return praw.helpers.submission_stream(r, TEST_SUBREDDIT)
         return itertools.chain(praw.helpers.comment_stream(r, TEST_SUBREDDIT),
                                 praw.helpers.submission_stream(r, TEST_SUBREDDIT))
 
@@ -75,7 +76,7 @@ if __name__ == '__main__':
     for s in get_stream():
         cards = []
         is_submission = hasattr(s, 'selftext')
-        print(is_submission, s)
+        print(dir(s))
         if is_submission:
             cards = find_card_mentions(s.selftext)
         else:
