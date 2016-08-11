@@ -96,5 +96,5 @@ if __name__ == '__main__':
     comments_thread.start()
     print('Started monitoring comments.')
 
-    submissions_thread.join()
+    # submissions_thread.join()
     comments_thread.join()
