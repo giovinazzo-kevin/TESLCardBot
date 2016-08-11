@@ -81,7 +81,7 @@ if __name__ == '__main__':
         else:
             cards = find_card_mentions(s.body)
 
-        if len(cards) > 0 and not s.saved:
+        if len(cards) > 0 and not s.saved and s.author != os.environ['REDDIT_USERNAME']:
             try:
                 if is_submission:
                     reply_to_submission(s, cards)
