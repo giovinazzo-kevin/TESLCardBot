@@ -73,7 +73,6 @@ def monitor_comments():
     r = get_praw()
     for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         cards = find_card_mentions(c.body)
-        print(cards)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
                 print('Replying to {} about the following cards: {}'.format(c.author, cards))
