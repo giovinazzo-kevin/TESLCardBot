@@ -11,9 +11,9 @@ class TestParsingFunctions(unittest.TestCase):
         # Make sure the repetition avoidance works
         self.assertEqual(rtesl.find_card_mentions('{{Test}} {{Blood Dragon}} ' * 4), ['Test', 'Blood Dragon'])
 
-    def test_normalize_card_name(self):
-        self.assertEqual(rtesl.normalize_card_name('Blood Dragon'), 'blooddragon')
-        self.assertEqual(rtesl.normalize_card_name('Blood, ;_--"\'Dragon'), 'blooddragon')
+    def test_escape_card_name(self):
+        self.assertEqual(rtesl.escape_card_name('Blood Dragon'), 'blooddragon')
+        self.assertEqual(rtesl.escape_card_name('Bl-ood, _-"\' Drag;on'), 'blooddragon')
 
 if __name__ == '__main__':
     unittest.main()

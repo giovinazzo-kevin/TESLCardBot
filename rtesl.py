@@ -5,6 +5,8 @@ import re
 import os
 
 
+BOT_AUTHOR = 'G3Kappa'
+TARGET_SUBREDDIT = 'elderscrollslegends'
 CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
 CARD_DATABASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
 
@@ -19,14 +21,14 @@ def find_card_mentions(s):
     return _remove_duplicates(CARD_MENTION_REGEX.findall(s))
 
 
-def normalize_card_name(card):
+def escape_card_name(card):
     return re.sub(r'[\s_\-"\',;]', '', card).lower()
 
 
 def build_response(cards):
     response = 'Here are the cards you mentioned: \n\n'
     for card in cards:
-        card_name = normalize_card_name(card)
+        card_name = escape_card_name(card)
 
         url = CARD_DATABASE_URL.format(card_name)
         # Check if the given card is a valid card
@@ -38,7 +40,7 @@ def build_response(cards):
     response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
                 'For information or to submit a bug report, please contact /u/​G3Kappa._)'
     response += '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
-                '| [Send PM](https://www.reddit.com/message/compose/?to=G3Kappa)'
+                '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(BOT_AUTHOR)
     return response
 
 
@@ -49,12 +51,12 @@ def reply_to(c, cards):
 
 
 if __name__ == '__main__':
-    r = praw.Reddit('TES:L Card Fetcher by /u/G3Kappa. ')
+    r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(BOT_AUTHOR))
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started!')
 
-    streams = itertools.chain(praw.helpers.comment_stream(r, 'elderscrollslegends'),
-                              praw.helpers.submission_stream(r, 'elderscrollslegends'))
+    streams = itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
+                              praw.helpers.submission_stream(r, TARGET_SUBREDDIT))
 
     for s in streams:
         cards = find_card_mentions(s.body)
