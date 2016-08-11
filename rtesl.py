@@ -25,7 +25,7 @@ def find_card_mentions(s):
 
 
 def escape_card_name(card):
-    return re.sub(r'[\s_\-"\',;]', '', card).lower()
+    return re.sub(r'[\s_\-"\',;\{\}]', '', card).lower()
 
 
 def build_response(cards):

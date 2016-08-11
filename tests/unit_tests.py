@@ -14,6 +14,7 @@ class TestParsingFunctions(unittest.TestCase):
     def test_escape_card_name(self):
         self.assertEqual(rtesl.escape_card_name('Blood Dragon'), 'blooddragon')
         self.assertEqual(rtesl.escape_card_name('Bl-ood, _-"\' Drag;on'), 'blooddragon')
+        self.assertEqual(rtesl.escape_card_name('{{{HOHO}}}}}'), 'hoho')
 
 if __name__ == '__main__':
     unittest.main()
