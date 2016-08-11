@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
     for s in streams:
         cards = []
-        is_submission = isinstance(s, praw.objects.Submission)
+        is_submission = hasattr(s, 'selftext')
         if is_submission:
             print(s.selftext)
             cards = find_card_mentions(s.selftext)
