@@ -56,14 +56,11 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started!')
 
-    streams = itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
-                              praw.helpers.submission_stream(r, TARGET_SUBREDDIT),
-                              praw.helpers.comment_stream(r, TEST_SUBREDDIT),
-                              praw.helpers.submission_stream(r, TEST_SUBREDDIT))
+    stream = praw.helpers.comment_stream(r, TARGET_SUBREDDIT)
 
-    for s in streams:
+    for s in stream:
         cards = find_card_mentions(s.body)
-        if len(cards) > 0 and not s.saved:
+        if len(cards) > 0 and not s.saved and s.author != os.environ['REDDIT_USERNAME']:
             try:
                 reply_to(s, cards)
                 s.save()  # Exploiting Reddit's servers has never been this easy!
