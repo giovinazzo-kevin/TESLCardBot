@@ -54,41 +54,43 @@ def reply_to_comment(c, cards):
 
 
 def reply_to_submission(s, cards):
-    print('Replying in {} about the following cards: {}'.format(s.title, cards))
+    print('Commenting in {} about the following cards: {}'.format(s.title, cards))
     response = build_response(cards)
     s.add_comment(response)
 
-
-def get_stream():
-    if not TEST_MODE:
-        return itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
-                               praw.helpers.submission_stream(r, TARGET_SUBREDDIT))
-    else:
-        return praw.helpers.submission_stream(r, TEST_SUBREDDIT)
-        return itertools.chain(praw.helpers.comment_stream(r, TEST_SUBREDDIT),
-                                praw.helpers.submission_stream(r, TEST_SUBREDDIT))
 
 if __name__ == '__main__':
     r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(BOT_AUTHOR))
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started! ({} MODE)'.format('PRODUCTION' if not TEST_MODE else 'DEVELOPMENT'))
 
-    for s in get_stream():
-        cards = []
-        is_submission = hasattr(s, 'selftext')
-        print(dir(s))
-        if is_submission:
-            cards = find_card_mentions(s.selftext)
+    running = True
+    while running:
+        new_submissions = new_comments = []
+        if not TEST_MODE:
+            new_submissions = [s for s in praw.helpers.submission_stream(r, TARGET_SUBREDDIT)]
+            new_comments = [c for c in praw.helpers.comment_stream(r, TARGET_SUBREDDIT)]
         else:
-            cards = find_card_mentions(s.body)
+            new_submissions = [s for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT)]
+            new_comments = [c for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT)]
 
-        if len(cards) > 0 and not s.saved and s.author != os.environ['REDDIT_USERNAME']:
-            try:
-                if is_submission:
+        for s in new_submissions:
+            cards = find_card_mentions(s.selftext)
+
+            if len(cards) > 0 and not s.saved:
+                try:
                     reply_to_submission(s, cards)
-                else:
-                    reply_to_comment(s, cards)
-                s.save()  # Exploiting Reddit's servers has never been this easy!
-                print('Done replying and saved post. ({})'.format(s.id))
-            except:
-                print('There was an error while trying to reply to: {}.'.format(s.id))
+                    s.save() # Exploiting Reddit's servers has never been this easy!
+                    print('Done commenting and saved thread. ({})'.format(s.id))
+                except:
+                    print('There was an error while trying to comment in: {}.'.format(s.id))
+
+        for c in new_comments:
+            cards = find_card_mentions(c.body)
+            if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
+                try:
+                    reply_to_comment(c, cards)
+                    c.save()
+                    print('Done replying and saved comment. ({})'.format(c.id))
+                except:
+                    print('There was an error while trying to reply to: {}.'.format(c.id))
