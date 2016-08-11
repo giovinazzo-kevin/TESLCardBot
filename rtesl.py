@@ -34,7 +34,7 @@ def build_response(cards):
         # Check if the given card is a valid card
         r = requests.get(url)
         if r.headers['content-type'] == 'image/png':
-            response += '- [{}]({})\n\n'.format(card, url)
+            response += '- [{}]({})\n\n'.format(card.title(), url)
         else:
             response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
     response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
