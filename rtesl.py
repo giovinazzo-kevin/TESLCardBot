@@ -53,8 +53,10 @@ def monitor_submissions():
         stream = praw.helpers.submission_stream(r, TEST_SUBREDDIT)
 
     for s in stream:
-        cards = find_card_mentions(s.selftext)
+        if TEST_MODE:
+            print(s)
 
+        cards = find_card_mentions(s.selftext)
         if len(cards) > 0 and not s.saved:
             try:
                 print('Commenting in {} about the following cards: {}'.format(s.title, cards))
@@ -72,6 +74,9 @@ def monitor_comments():
         stream = praw.helpers.comment_stream(r, TEST_SUBREDDIT)
 
     for c in stream:
+        if TEST_MODE:
+            print(c)
+
         cards = find_card_mentions(c.body)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
