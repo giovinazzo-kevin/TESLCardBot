@@ -1,5 +1,5 @@
 import requests
-import itertools
+import thread
 import praw
 import re
 import os
@@ -47,16 +47,41 @@ def build_response(cards):
     return response
 
 
-def reply_to_comment(c, cards):
-    print('Replying to {} about the following cards: {}'.format(c.author, cards))
-    response = build_response(cards)
-    c.reply(response)
+def monitor_submissions():
+    stream = praw.helpers.submission_stream(r, TARGET_SUBREDDIT)
+    if TEST_MODE:
+        stream = praw.helpers.submission_stream(r, TEST_SUBREDDIT)
+
+    for s in stream:
+        cards = find_card_mentions(s.selftext)
+
+        if len(cards) > 0 and not s.saved:
+            try:
+                print('Commenting in {} about the following cards: {}'.format(s.title, cards))
+                response = build_response(cards)
+                s.add_comment(response)
+                s.save()  # Exploiting Reddit's servers has never been this easy!
+                print('Done commenting and saved thread. ({})'.format(s.id))
+            except:
+                print('There was an error while trying to comment in: {}.'.format(s.id))
 
 
-def reply_to_submission(s, cards):
-    print('Commenting in {} about the following cards: {}'.format(s.title, cards))
-    response = build_response(cards)
-    s.add_comment(response)
+def monitor_comments():
+    stream = praw.helpers.comment_stream(r, TARGET_SUBREDDIT)
+    if TEST_MODE:
+        stream = praw.helpers.comment_stream(r, TEST_SUBREDDIT)
+
+    for c in stream:
+        cards = find_card_mentions(c.body)
+        if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
+            try:
+                print('Replying to {} about the following cards: {}'.format(c.author, cards))
+                response = build_response(cards)
+                c.reply(response)
+                c.save()
+                print('Done replying and saved comment. ({})'.format(c.id))
+            except:
+                print('There was an error while trying to reply to: {}.'.format(c.id))
 
 
 if __name__ == '__main__':
@@ -64,35 +89,8 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started! ({} MODE)'.format('PRODUCTION' if not TEST_MODE else 'DEVELOPMENT'))
 
-    running = True
-    while running:
-        new_submissions = new_comments = []
-        if not TEST_MODE:
-            new_submissions = [s for s in praw.helpers.submission_stream(r, TARGET_SUBREDDIT)]
-            new_comments = [c for c in praw.helpers.comment_stream(r, TARGET_SUBREDDIT)]
-        else:
-            new_submissions = [s for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT)]
-            new_comments = [c for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT)]
-            print(new_submissions)
-            print(new_comments)
+    thread.start_new_thread(monitor_submissions, ())
+    thread.start_new_thread(monitor_comments, ())
 
-        for s in new_submissions:
-            cards = find_card_mentions(s.selftext)
 
-            if len(cards) > 0 and not s.saved:
-                try:
-                    reply_to_submission(s, cards)
-                    s.save() # Exploiting Reddit's servers has never been this easy!
-                    print('Done commenting and saved thread. ({})'.format(s.id))
-                except:
-                    print('There was an error while trying to comment in: {}.'.format(s.id))
 
-        for c in new_comments:
-            cards = find_card_mentions(c.body)
-            if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
-                try:
-                    reply_to_comment(c, cards)
-                    c.save()
-                    print('Done replying and saved comment. ({})'.format(c.id))
-                except:
-                    print('There was an error while trying to reply to: {}.'.format(c.id))
