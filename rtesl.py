@@ -5,6 +5,8 @@ import re
 import os
 
 
+TEST_MODE = True
+
 BOT_AUTHOR = 'G3Kappa'
 TARGET_SUBREDDIT = 'elderscrollslegends'
 TEST_SUBREDDIT = 'TESLCardBotTesting'
@@ -35,7 +37,7 @@ def build_response(cards):
         # Check if the given card is a valid card
         r = requests.get(url)
         if r.headers['content-type'] == 'image/png':
-            response += '- [{}]({})\n\n'.format(card, url)
+            response += '- [{}]({})\n\n'.format(card.title(), url)
         else:
             response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
     response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
@@ -45,10 +47,16 @@ def build_response(cards):
     return response
 
 
-def reply_to(c, cards):
+def reply_to_comment(c, cards):
     print('Replying to {} about the following cards: {}'.format(c.author, cards))
     response = build_response(cards)
     c.reply(response)
+
+
+def reply_to_submission(s, cards):
+    print('Replying in {} about the following cards: {}'.format(s.title, cards))
+    response = build_response(cards)
+    s.add_comment(response)
 
 
 if __name__ == '__main__':
@@ -56,16 +64,27 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started!')
 
-    streams = itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
-                              praw.helpers.submission_stream(r, TARGET_SUBREDDIT),
-                              praw.helpers.comment_stream(r, TEST_SUBREDDIT),
+    streams = itertools.chain(praw.helpers.comment_stream(r, TEST_SUBREDDIT),
                               praw.helpers.submission_stream(r, TEST_SUBREDDIT))
+    if not TEST_MODE:
+        streams = itertools.chain(streams,
+                                  praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
+                                  praw.helpers.submission_stream(r, TARGET_SUBREDDIT))
 
     for s in streams:
-        cards = find_card_mentions(s.body)
+        cards = []
+        is_submission = isinstance(s, praw.objects.Submission)
+        if is_submission:
+            cards = find_card_mentions(s.selftext)
+        else:
+            cards = find_card_mentions(s.body)
+
         if len(cards) > 0 and not s.saved:
             try:
-                reply_to(s, cards)
+                if is_submission:
+                    reply_to_submission(s, cards)
+                else:
+                    reply_to_comment(s, cards)
                 s.save()  # Exploiting Reddit's servers has never been this easy!
                 print('Done replying and saved post. ({})'.format(s.id))
             except:
