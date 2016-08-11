@@ -72,6 +72,7 @@ def monitor_submissions():
 def monitor_comments():
     r = get_praw()
     for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
+        print(c)
         cards = find_card_mentions(c.body)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
