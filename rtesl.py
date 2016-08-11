@@ -5,7 +5,7 @@ import re
 import os
 
 
-TEST_MODE = False
+TEST_MODE = True
 
 BOT_AUTHOR = 'G3Kappa'
 TARGET_SUBREDDIT = 'elderscrollslegends'
