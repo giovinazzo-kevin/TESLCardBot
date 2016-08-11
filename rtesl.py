@@ -87,8 +87,8 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started! ({} MODE)'.format('PRODUCTION' if not TEST_MODE else 'DEVELOPMENT'))
 
-    submissions_thread = threading.Thread(target=monitor_submissions, args=(r))
-    comments_thread = threading.Thread(target=monitor_comments, args=(r))
+    submissions_thread = threading.Thread(target=monitor_submissions, args=(r,))
+    comments_thread = threading.Thread(target=monitor_comments, args=(r,))
 
     submissions_thread.start()
     comments_thread.start()
