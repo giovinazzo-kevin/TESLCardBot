@@ -64,12 +64,12 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started!')
 
-    streams = itertools.chain(praw.helpers.comment_stream(r, TEST_SUBREDDIT),
-                              praw.helpers.submission_stream(r, TEST_SUBREDDIT))
     if not TEST_MODE:
-        streams = itertools.chain(streams,
-                                  praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
+        streams = itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
                                   praw.helpers.submission_stream(r, TARGET_SUBREDDIT))
+    else:
+        streams = itertools.chain(praw.helpers.comment_stream(r, TEST_SUBREDDIT),
+                                  praw.helpers.submission_stream(r, TEST_SUBREDDIT))
 
     for s in streams:
         cards = []
