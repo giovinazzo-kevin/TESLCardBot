@@ -91,8 +91,8 @@ if __name__ == '__main__':
     submissions_thread = threading.Thread(target=monitor_submissions)
     comments_thread = threading.Thread(target=monitor_comments)
 
-    submissions_thread.start()
-    print('Started monitoring submissions.')
+    # submissions_thread.start()
+    # print('Started monitoring submissions.')
     comments_thread.start()
     print('Started monitoring comments.')
 
