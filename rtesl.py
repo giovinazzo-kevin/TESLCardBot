@@ -73,6 +73,8 @@ if __name__ == '__main__':
         else:
             new_submissions = [s for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT)]
             new_comments = [c for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT)]
+            print(new_submissions)
+            print(new_comments)
 
         for s in new_submissions:
             cards = find_card_mentions(s.selftext)
