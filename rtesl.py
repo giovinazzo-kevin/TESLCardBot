@@ -19,14 +19,14 @@ def find_card_mentions(s):
     return _remove_duplicates(CARD_MENTION_REGEX.findall(s))
 
 
-def normalize_card_name(card):
+def escape_card_name(card):
     return re.sub(r'[\s_\-"\',;]', '', card).lower()
 
 
 def build_response(cards):
     response = 'Here are the cards you mentioned: \n\n'
     for card in cards:
-        card_name = normalize_card_name(card)
+        card_name = escape_card_name(card)
 
         url = CARD_DATABASE_URL.format(card_name)
         # Check if the given card is a valid card
