@@ -47,30 +47,35 @@ def build_response(cards):
     return response
 
 
-def monitor_submissions():
+praw_lock = threading.Lock()
+
+
+def monitor_submissions(r):
     for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         cards = find_card_mentions(s.selftext)
         if len(cards) > 0 and not s.saved:
             try:
                 print('Commenting in {} about the following cards: {}'.format(s.title, cards))
-                response = build_response(cards)
-                s.add_comment(response)
-                s.save()
+                with praw_lock:
+                    response = build_response(cards)
+                    s.add_comment(response)
+                    s.save()
                 print('Done commenting and saved thread. ({})'.format(s.id))
             except:
                 print('There was an error while trying to comment in: {}.'.format(s.id))
     print('Submission stream exhausted!!')
 
 
-def monitor_comments():
+def monitor_comments(r):
     for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         cards = find_card_mentions(c.body)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
                 print('Replying to {} about the following cards: {}'.format(c.author, cards))
-                response = build_response(cards)
-                c.reply(response)
-                c.save()
+                with praw_lock:
+                    response = build_response(cards)
+                    c.reply(response)
+                    c.save()
                 print('Done replying and saved comment. ({})'.format(c.id))
             except:
                 print('There was an error while trying to reply to: {}.'.format(c.id))
@@ -82,8 +87,8 @@ if __name__ == '__main__':
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started! ({} MODE)'.format('PRODUCTION' if not TEST_MODE else 'DEVELOPMENT'))
 
-    submissions_thread = threading.Thread(target=monitor_submissions)
-    comments_thread = threading.Thread(target=monitor_comments)
+    submissions_thread = threading.Thread(target=monitor_submissions, args=(r))
+    comments_thread = threading.Thread(target=monitor_comments, args=(r))
 
     submissions_thread.start()
     comments_thread.start()
