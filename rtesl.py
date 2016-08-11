@@ -74,8 +74,8 @@ if __name__ == '__main__':
     for s in streams:
         cards = []
         is_submission = hasattr(s, 'selftext')
+        print(is_submission, dir(s))
         if is_submission:
-            print(s.selftext)
             cards = find_card_mentions(s.selftext)
         else:
             cards = find_card_mentions(s.body)
