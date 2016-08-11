@@ -52,17 +52,16 @@ def monitor_submissions():
     if TEST_MODE:
         stream = praw.helpers.submission_stream(r, TEST_SUBREDDIT)
 
-    already_done = []
     for s in stream:
         cards = find_card_mentions(s.selftext)
 
-        if len(cards) > 0 and s not in already_done:
+        if len(cards) > 0 and not s.saved:
             try:
                 print('Commenting in {} about the following cards: {}'.format(s.title, cards))
                 response = build_response(cards)
                 s.add_comment(response)
-                already_done.append(s)
-                print('Done commenting. ({})'.format(s.id))
+                s.save()
+                print('Done commenting and saved thread. ({})'.format(s.id))
             except:
                 print('There was an error while trying to comment in: {}.'.format(s.id))
 
@@ -72,16 +71,15 @@ def monitor_comments():
     if TEST_MODE:
         stream = praw.helpers.comment_stream(r, TEST_SUBREDDIT)
 
-    already_done = []
     for c in stream:
         cards = find_card_mentions(c.body)
-        if len(cards) > 0 and c not in already_done and c.author != os.environ['REDDIT_USERNAME']:
+        if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
                 print('Replying to {} about the following cards: {}'.format(c.author, cards))
                 response = build_response(cards)
                 c.reply(response)
-                already_done.append(c)
-                print('Done replying. ({})'.format(c.id))
+                c.save()
+                print('Done replying and saved comment. ({})'.format(c.id))
             except:
                 print('There was an error while trying to reply to: {}.'.format(c.id))
 
