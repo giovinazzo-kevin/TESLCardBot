@@ -66,6 +66,7 @@ def monitor_submissions():
                 print('Done commenting and saved thread. ({})'.format(s.id))
             except:
                 print('There was an error while trying to comment in: {}.'.format(s.id))
+    print('Submission stream exhausted!!')
 
 
 def monitor_comments():
@@ -87,6 +88,7 @@ def monitor_comments():
                 print('Done replying and saved comment. ({})'.format(c.id))
             except:
                 print('There was an error while trying to reply to: {}.'.format(c.id))
+    print('Comment stream exhausted!!')
 
 
 if __name__ == '__main__':
