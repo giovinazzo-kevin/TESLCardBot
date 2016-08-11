@@ -97,6 +97,3 @@ if __name__ == '__main__':
 
     submissions_thread.join()
     comments_thread.join()
-
-
-
