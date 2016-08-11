@@ -7,6 +7,7 @@ import os
 
 BOT_AUTHOR = 'G3Kappa'
 TARGET_SUBREDDIT = 'elderscrollslegends'
+TEST_SUBREDDIT = 'TESLCardBotTesting'
 CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
 CARD_DATABASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
 
@@ -34,7 +35,7 @@ def build_response(cards):
         # Check if the given card is a valid card
         r = requests.get(url)
         if r.headers['content-type'] == 'image/png':
-            response += '- [{}]({})\n\n'.format(card.title(), url)
+            response += '- [{}]({})\n\n'.format(card, url)
         else:
             response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
     response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
@@ -56,7 +57,9 @@ if __name__ == '__main__':
     print('TESLCardBot started!')
 
     streams = itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
-                              praw.helpers.submission_stream(r, TARGET_SUBREDDIT))
+                              praw.helpers.submission_stream(r, TARGET_SUBREDDIT),
+                              praw.helpers.comment_stream(r, TEST_SUBREDDIT),
+                              praw.helpers.submission_stream(r, TEST_SUBREDDIT))
 
     for s in streams:
         cards = find_card_mentions(s.body)
