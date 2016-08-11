@@ -48,11 +48,7 @@ def build_response(cards):
 
 
 def monitor_submissions():
-    stream = praw.helpers.submission_stream(r, TARGET_SUBREDDIT)
-    if TEST_MODE:
-        stream = praw.helpers.submission_stream(r, TEST_SUBREDDIT)
-
-    for s in stream:
+    for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         if TEST_MODE:
             print(s)
 
@@ -70,11 +66,7 @@ def monitor_submissions():
 
 
 def monitor_comments():
-    stream = praw.helpers.comment_stream(r, TARGET_SUBREDDIT)
-    if TEST_MODE:
-        stream = praw.helpers.comment_stream(r, TEST_SUBREDDIT)
-
-    for c in stream:
+    for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         if TEST_MODE:
             print(c)
 
