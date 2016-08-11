@@ -49,9 +49,6 @@ def build_response(cards):
 
 def monitor_submissions():
     for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
-        if TEST_MODE:
-            print(s)
-
         cards = find_card_mentions(s.selftext)
         if len(cards) > 0 and not s.saved:
             try:
@@ -67,9 +64,6 @@ def monitor_submissions():
 
 def monitor_comments():
     for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
-        if TEST_MODE:
-            print(c)
-
         cards = find_card_mentions(c.body)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
