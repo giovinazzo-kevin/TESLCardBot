@@ -62,7 +62,7 @@ def reply_to_submission(s, cards):
 if __name__ == '__main__':
     r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(BOT_AUTHOR))
     r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
-    print('TESLCardBot started!')
+    print('TESLCardBot started! ({} MODE)'.format('PRODUCTION' if not TEST_MODE else 'DEVELOPMENT'))
 
     if not TEST_MODE:
         streams = itertools.chain(praw.helpers.comment_stream(r, TARGET_SUBREDDIT),
@@ -75,6 +75,7 @@ if __name__ == '__main__':
         cards = []
         is_submission = isinstance(s, praw.objects.Submission)
         if is_submission:
+            print(s.selftext)
             cards = find_card_mentions(s.selftext)
         else:
             cards = find_card_mentions(s.body)
