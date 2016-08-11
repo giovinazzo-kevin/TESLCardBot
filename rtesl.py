@@ -47,7 +47,7 @@ def build_response(cards):
     return response
 
 
-praw_lock = threading.Lock()
+praw_lock = threading.RLock()
 
 
 def monitor_submissions(r):
