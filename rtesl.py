@@ -47,35 +47,38 @@ def build_response(cards):
     return response
 
 
-praw_lock = threading.RLock()
+def get_praw():
+    r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(BOT_AUTHOR))
+    r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
+    return r
 
 
-def monitor_submissions(r):
+def monitor_submissions():
+    r = get_praw()
     for s in praw.helpers.submission_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         cards = find_card_mentions(s.selftext)
         if len(cards) > 0 and not s.saved:
             try:
                 print('Commenting in {} about the following cards: {}'.format(s.title, cards))
-                with praw_lock:
-                    response = build_response(cards)
-                    s.add_comment(response)
-                    s.save()
+                response = build_response(cards)
+                s.add_comment(response)
+                s.save()
                 print('Done commenting and saved thread. ({})'.format(s.id))
             except:
                 print('There was an error while trying to comment in: {}.'.format(s.id))
     print('Submission stream exhausted!!')
 
 
-def monitor_comments(r):
+def monitor_comments():
+    r = get_praw()
     for c in praw.helpers.comment_stream(r, TEST_SUBREDDIT if TEST_MODE else TARGET_SUBREDDIT):
         cards = find_card_mentions(c.body)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
                 print('Replying to {} about the following cards: {}'.format(c.author, cards))
-                with praw_lock:
-                    response = build_response(cards)
-                    c.reply(response)
-                    c.save()
+                response = build_response(cards)
+                c.reply(response)
+                c.save()
                 print('Done replying and saved comment. ({})'.format(c.id))
             except:
                 print('There was an error while trying to reply to: {}.'.format(c.id))
@@ -83,15 +86,15 @@ def monitor_comments(r):
 
 
 if __name__ == '__main__':
-    r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(BOT_AUTHOR))
-    r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
     print('TESLCardBot started! ({} MODE)'.format('PRODUCTION' if not TEST_MODE else 'DEVELOPMENT'))
 
-    submissions_thread = threading.Thread(target=monitor_submissions, args=(r,))
-    comments_thread = threading.Thread(target=monitor_comments, args=(r,))
+    submissions_thread = threading.Thread(target=monitor_submissions)
+    comments_thread = threading.Thread(target=monitor_comments)
 
     submissions_thread.start()
+    print('Started monitoring submissions.')
     comments_thread.start()
+    print('Started monitoring comments.')
 
     submissions_thread.join()
     comments_thread.join()
