@@ -38,7 +38,7 @@
 	{
 		"name": "Ahnassi",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "willpower/agility",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -74,7 +74,7 @@
 	{
 		"name": "Allena Benoch",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/agility",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "1",
@@ -112,9 +112,7 @@
 		"type": "Action",
 		"attribute": "willpower",
 		"rarity": "Common",
-		"cost": "1",
-		
-		"health": ""
+		"cost": "1"
 	},
 	{
 		"name": "Archein Elite",
@@ -157,18 +155,14 @@
 		"type": "Action",
 		"attribute": "agility",
 		"rarity": "Common",
-		"cost": "1",
-		
-		"health": ""
+		"cost": "1"
 	},
 	{
 		"name": "Arrow Storm",
 		"type": "Action",
 		"attribute": "willpower",
 		"rarity": "Rare",
-		"cost": "3",
-		
-		"health": ""
+		"cost": "3"
 	},
 	{
 		"name": "Artaeum Savant",
@@ -216,7 +210,7 @@
 	{
 		"name": "Ayrenn",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "intelligence/willpower",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -968,7 +962,7 @@
 	{
 		"name": "Edict of Azura",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "willpower/endurance",
 		"rarity": "Epic",
 		"cost": "4"
 	},
@@ -1069,7 +1063,7 @@
 	{
 		"name": "Falinesti Reaver",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/agility",
 		"rarity": "Epic",
 		"cost": "8",
 		"attack": "5",
@@ -1241,7 +1235,7 @@
 	{
 		"name": "General Tullius",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "willpower/endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "2",
@@ -1318,7 +1312,7 @@
 	{
 		"name": "Gortwog gro-Nagrom",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "4",
@@ -1484,7 +1478,7 @@
 	{
 		"name": "High King Emeric",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "intelligence/endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "5",
@@ -1900,7 +1894,7 @@
 	{
 		"name": "Master of Thieves",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "willpower/agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -1916,7 +1910,7 @@
 	{
 		"name": "Merric-at-Aswala",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/intelligence",
 		"rarity": "Legendary",
 		"cost": "7",
 		"attack": "2",
@@ -1941,7 +1935,7 @@
 	{
 		"name": "Militant Chieftain",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -2369,7 +2363,7 @@
 	{
 		"name": "Queen Barenziah",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "intelligence/agility",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "6",
@@ -2471,7 +2465,7 @@
 	{
 		"name": "Red Bramman",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "agility/endurance",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "5",
@@ -2534,7 +2528,7 @@
 	{
 		"name": "Rift Thane",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/willpower",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "2",
@@ -2615,7 +2609,7 @@
 	{
 		"name": "Sadras Agent",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "intelligence/agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -2658,7 +2652,7 @@
 	{
 		"name": "Sentinel Battlemace",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "strength/intelligence",
 		"rarity": "Epic",
 		"cost": "4"
 	},
@@ -2717,7 +2711,7 @@
 	{
 		"name": "Shornhelm Champion",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "intelligence/endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -2796,7 +2790,7 @@
 	{
 		"name": "Skywatch Vindicator",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "intelligence/willpower",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "4",
@@ -3157,7 +3151,7 @@
 	{
 		"name": "Thorn Histmage",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "agility/endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "2",
@@ -3243,7 +3237,7 @@
 	{
 		"name": "Tyr",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "strength/willpower",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "5",

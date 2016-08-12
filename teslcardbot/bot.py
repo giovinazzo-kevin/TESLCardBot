@@ -1,12 +1,100 @@
 import requests
+from enum import Enum
+import json
 import praw
 import re
 import os
 
 
+class Card:
+    CARD_IMAGE_BASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
+    JSON_DATA = []
+
+    @staticmethod
+    def preload_card_data(path='data/cards.json'):
+        with open(path) as f:
+            Card.JSON_DATA = json.load(f)
+
+    @staticmethod
+    def _escape_name(card):
+        return re.sub(r'[\s_\-"\',;{\}]', '', card).lower()
+
+    @staticmethod
+    def _img_exists(url):
+        req = requests.get(url)
+        return req.headers['content-type'] == 'image/png'
+
+    @staticmethod
+    def get_info(name):
+        name = Card._escape_name(name)
+
+        if name == 'teslcardbot':  # I wonder...
+            return Card('TESLCardBot', 'https://imgs.xkcd.com/comics/tabletop_roleplaying.png',
+                        type='Bot',
+                        attribute='intelligence',
+                        rarity='Legendary',
+                        cost=7, power=7, health=7)
+
+        # If JSON_DATA hasn't been populated yet, try to do it now or fail miserably.
+        if len(Card.JSON_DATA) <= 0:
+            Card.preload_card_data()
+            assert(len(Card.JSON_DATA) > 0)
+
+        data = next((c for c in Card.JSON_DATA if Card._escape_name(c['name']) == name), None)
+        if data is None:
+            return None
+
+        img_url = Card.CARD_IMAGE_BASE_URL.format(name)
+        # Unlikely, but possible?
+        if not Card._img_exists(img_url):
+            img_url = 'http://imgur.com/1Lxy3DA'
+
+        name = data['name']
+        type = data['type']
+        attribute = data['attribute']
+        rarity = data['rarity']
+        cost = int(data['cost'])
+        power = 0
+        health = 0
+        if type == 'Creature':
+            power = int(data['attack'])
+            health = int(data['health'])
+
+        return Card(name=name,
+                    img_url=img_url,
+                    type=type,
+                    attribute=attribute,
+                    rarity=rarity,
+                    cost=cost,
+                    power=power,
+                    health=health)
+
+    def __init__(self, name, img_url, type='Creature', attribute='neutral',
+                 rarity='Common', cost=0, power=0, health=0):
+        self.name = name
+        self.img_url = img_url
+        self.type = type
+        self.attribute = attribute
+        self.rarity = rarity
+        self.cost = cost
+        self.power = power
+        self.health = health
+
+    def __str__(self):
+        return '{attr} | {rarity} | {name} [📷]({url}) | {type} | {mana} | {atk} | {hp}'.format(
+            attr=self.attribute,
+            rarity=self.rarity,
+            name=self.name,
+            url=self.img_url,
+            type=self.type,
+            mana=self.cost,
+            atk=self.power,
+            hp=self.health
+        )
+
+
 class TESLCardBot:
     CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
-    CARD_DATABASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
 
     @staticmethod
     def _remove_duplicates(seq):
@@ -17,23 +105,6 @@ class TESLCardBot:
     @staticmethod
     def find_card_mentions(s):
         return TESLCardBot._remove_duplicates(TESLCardBot.CARD_MENTION_REGEX.findall(s))
-
-    @staticmethod
-    def escape_card_name(card):
-        return re.sub(r'[\s_\-"\',;\{\}]', '', card).lower()
-
-    @staticmethod
-    def get_card_info(card):
-        # Easter egg!
-        if card == 'teslcardbot':
-            return 'https://imgs.xkcd.com/comics/tabletop_roleplaying.png'
-
-        return TESLCardBot.CARD_DATABASE_URL.format(card)
-
-    @staticmethod
-    def is_valid_info(card_info):
-        req = requests.get(card_info)
-        return req.headers['content-type'] == 'image/png'
 
     def _get_praw_instance(self):
         r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(self.author))
@@ -66,27 +137,22 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Here are the cards you mentioned: \n\n'
-        for card in cards:
-            card = card.title()
-            card_name = TESLCardBot.escape_card_name(card)
-            if len(card_name) <= 0:
-                continue
+        response = 'Attribute | Rarity | Name | Type | Cost | Power | Health\n\n---|---|----|----|----|----|----\n\n'
 
-            info = TESLCardBot.get_card_info(card_name)
-            # Check if the given card is a valid card
-            if TESLCardBot.is_valid_info(info):
-                response += '- [{}]({})\n\n'.format(card, info)
-            else:
-                response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
-        response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
-                    'For information or to submit a bug report, please contact /u/​G3Kappa._)'
-        response += '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
-                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author)
+        for name in cards:
+            card = Card.get_info(name)
+            if card is None:
+                card = Card('{} (Typo?)'.format(name), 'http://imgur.com/1Lxy3DA')
+            response += '{}\n\n'.format(str(card))
+
+        response += '&nbsp;\n\n^(_I am a bot, and this action was performed automatically. ' \
+                    'For information or to submit a bug report, please contact /u/{}._)' \
+                    '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
+                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author, self.author)
         return response
 
     def log(self, msg):
-        print('TESLCardBot# {}'.format(msg))
+        print('TESLCardBot # {}'.format(msg))
 
     def start(self, batch_limit=10, buffer_size=1000):
         r = None
