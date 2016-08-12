@@ -57,8 +57,8 @@ class Card:
         attribute = data['attribute']
         rarity = data['rarity']
         cost = int(data['cost'])
-        power = 0
-        health = 0
+        power = 'N/A'
+        health = 'N/A'
         if type == 'Creature':
             power = int(data['attack'])
             health = int(data['health'])
@@ -147,7 +147,14 @@ class TESLCardBot:
         for name in cards:
             card = Card.get_info(name)
             if card is None:
-                card = Card('{} (Typo?)'.format(name), 'http://imgur.com/1Lxy3DA')
+                card = Card(name=name,
+                            img_url='http://imgur.com/1Lxy3DA',
+                            type='Typo',
+                            attribute='None',
+                            rarity='Undefined',
+                            cost='Null',
+                            power='0',
+                            health='False')
             response += '{}\n'.format(str(card))
 
         response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed automatically. ' \

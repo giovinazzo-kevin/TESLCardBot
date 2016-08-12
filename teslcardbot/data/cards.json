@@ -2,7 +2,7 @@
 	{
 		"name": "Abecean Navigator",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "3",
@@ -11,7 +11,7 @@
 	{
 		"name": "Adoring Fan",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Legendary",
 		"cost": "3",
 		"attack": "0",
@@ -20,7 +20,7 @@
 	{
 		"name": "Afflicted Alit",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "3",
@@ -29,7 +29,7 @@
 	{
 		"name": "Ageless Automaton",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "2",
@@ -38,7 +38,7 @@
 	{
 		"name": "Ahnassi",
 		"type": "Creature",
-		"attribute": "willpower/agility",
+		"attribute": "Willpower/Agility",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -47,7 +47,7 @@
 	{
 		"name": "Aldmeri Patriot",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "1",
 		"attack": "1",
@@ -56,7 +56,7 @@
 	{
 		"name": "Alik'r Bandit",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -65,7 +65,7 @@
 	{
 		"name": "Alik'r Survivalist",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -74,7 +74,7 @@
 	{
 		"name": "Allena Benoch",
 		"type": "Creature",
-		"attribute": "strength/agility",
+		"attribute": "Strength/Agility",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "1",
@@ -83,7 +83,7 @@
 	{
 		"name": "Alpha Wolf",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -92,7 +92,7 @@
 	{
 		"name": "An-Xileel Invader",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "5",
@@ -101,7 +101,7 @@
 	{
 		"name": "Angry Grahl",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "2",
@@ -110,14 +110,14 @@
 	{
 		"name": "Apprentice's Potion",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Archein Elite",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -126,7 +126,7 @@
 	{
 		"name": "Archein Guerrilla",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "2",
@@ -135,7 +135,7 @@
 	{
 		"name": "Archein Venomtongue",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "1",
@@ -144,7 +144,7 @@
 	{
 		"name": "Arenthia Swindler",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "2",
@@ -153,21 +153,21 @@
 	{
 		"name": "Arrow in the Knee",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Arrow Storm",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Artaeum Savant",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "1",
@@ -176,7 +176,7 @@
 	{
 		"name": "Ash Servant",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "2",
@@ -185,14 +185,14 @@
 	{
 		"name": "Assassin's Bow",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Auridon Paladin",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "4",
@@ -201,7 +201,7 @@
 	{
 		"name": "Auroran Sentry",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "8",
 		"attack": "5",
@@ -210,7 +210,7 @@
 	{
 		"name": "Ayrenn",
 		"type": "Creature",
-		"attribute": "intelligence/willpower",
+		"attribute": "Intelligence/Willpower",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -219,7 +219,7 @@
 	{
 		"name": "Baandari Bruiser",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -228,7 +228,7 @@
 	{
 		"name": "Balmora Spymaster",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "0",
@@ -237,7 +237,7 @@
 	{
 		"name": "Bangkorai Butcher",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "4",
@@ -246,7 +246,7 @@
 	{
 		"name": "Barded Guar",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -255,7 +255,7 @@
 	{
 		"name": "Baron of Tear",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -264,7 +264,7 @@
 	{
 		"name": "Battlerage Orc",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -273,7 +273,7 @@
 	{
 		"name": "Belligerent Giant",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "7",
 		"attack": "7",
@@ -282,7 +282,7 @@
 	{
 		"name": "Black Marsh Warden",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "2",
@@ -291,7 +291,7 @@
 	{
 		"name": "Black Worm Necromancer",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "4",
@@ -300,14 +300,14 @@
 	{
 		"name": "Blackmail",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "1"
 	},
 	{
 		"name": "Blackrose Herbalist",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "2",
@@ -316,7 +316,7 @@
 	{
 		"name": "Blacksap Protector",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -325,7 +325,7 @@
 	{
 		"name": "Blighted Alit",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "5",
@@ -334,7 +334,7 @@
 	{
 		"name": "Blood Dragon",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -343,7 +343,7 @@
 	{
 		"name": "Blood Magic Lord",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "6",
@@ -352,7 +352,7 @@
 	{
 		"name": "Bog Lurcher",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "9",
@@ -361,14 +361,14 @@
 	{
 		"name": "Bone Bow",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Bone Colossus",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "7",
 		"attack": "5",
@@ -377,7 +377,7 @@
 	{
 		"name": "Breton Conjurer",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "1",
@@ -386,14 +386,14 @@
 	{
 		"name": "Brilliant Experiment",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "2"
 	},
 	{
 		"name": "Bruma Armorer",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "2",
@@ -402,7 +402,7 @@
 	{
 		"name": "Bruma Profiteer",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "3",
@@ -411,7 +411,7 @@
 	{
 		"name": "Brutal Ashlander",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -420,21 +420,21 @@
   {
 		"name": "Burn and Pillage",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Calm",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "0"
 	},
 	{
 		"name": "Camlorn Adventurer",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -443,7 +443,7 @@
 	{
 		"name": "Camlorn Hero",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "4",
@@ -452,7 +452,7 @@
 	{
 		"name": "Camlorn Sentinel",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -461,7 +461,7 @@
 	{
 		"name": "Camoran Scout Leader",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "2",
@@ -470,14 +470,14 @@
 	{
 		"name": "Cast Out",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Cathay-raht Veteran",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "1",
@@ -486,7 +486,7 @@
 	{
 		"name": "Cave Grahl",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "2",
@@ -495,7 +495,7 @@
 	{
 		"name": "Chaurus Reaper",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "7",
 		"attack": "5",
@@ -504,7 +504,7 @@
 	{
 		"name": "Cheydinhal Sapper",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -513,14 +513,14 @@
 	{
 		"name": "Chieftain's Banner",
 		"type": "Support",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Child of Hircine",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "6",
@@ -529,7 +529,7 @@
 	{
 		"name": "Cliff Racer",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "4",
@@ -538,7 +538,7 @@
 	{
 		"name": "Cloudrest Illusionist",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -547,7 +547,7 @@
 	{
 		"name": "Covenant Marauder",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "1",
 		"attack": "2",
@@ -556,7 +556,7 @@
 	{
 		"name": "Craglorn Scavenger",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "1",
@@ -565,7 +565,7 @@
 	{
 		"name": "Crown Quartermaster",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "2",
@@ -574,21 +574,21 @@
 	{
 		"name": "Cruel Firebloom",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "0"
 	},
 	{
 		"name": "Crushing Blow",
 		"type": "Action",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "3"
 	},
 	{
 		"name": "Crystal Tower Crafter",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -597,7 +597,7 @@
 	{
 		"name": "Cunning Ally",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -606,14 +606,14 @@
 	{
 		"name": "Curse",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "0"
 	},
 	{
 		"name": "Cursed Spectre",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "2",
@@ -622,14 +622,14 @@
 	{
 		"name": "Daedric Dagger",
 		"type": "Item",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2"
 	},
 	{
 		"name": "Daggerfall Mage",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "3",
 		"attack": "2",
@@ -638,7 +638,7 @@
 	{
 		"name": "Dagi-raht Mystic",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -647,7 +647,7 @@
 	{
 		"name": "Daring Cutpurse",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -656,7 +656,7 @@
 	{
 		"name": "Dark Harvester",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "7",
 		"attack": "2",
@@ -665,28 +665,28 @@
 	{
 		"name": "Dark Rift",
 		"type": "Support",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "2"
 	},
 	{
 		"name": "Dawn's Wrath",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "8"
 	},
 	{
 		"name": "Dawnbreaker",
 		"type": "Item",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "4"
 	},
 	{
 		"name": "Dawnstar healer",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "3",
@@ -695,7 +695,7 @@
 	{
 		"name": "Deadly Draugr",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -704,7 +704,7 @@
 	{
 		"name": "Deathless Draugr",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -713,7 +713,7 @@
 	{
 		"name": "Descendant of Alkosh",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "1",
 		"attack": "1",
@@ -722,7 +722,7 @@
 	{
 		"name": "Deshaan Avenger",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -731,7 +731,7 @@
 	{
 		"name": "Deshaan Sneak",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -740,21 +740,21 @@
 	{
 		"name": "Desperate Conjuring",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "3"
 	},
 	{
 		"name": "Detain",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "1"
 	},
 	{
 		"name": "Disciple of Namira",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -763,7 +763,7 @@
 	{
 		"name": "Divayth Fyr",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "11",
 		"attack": "6",
@@ -772,21 +772,21 @@
 	{
 		"name": "Divine Conviction",
 		"type": "Support",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "4"
 	},
 	{
 		"name": "Divine Fervor",
 		"type": "Support",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "4"
 	},
 	{
 		"name": "Doomcrag Vampire",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "4",
@@ -795,7 +795,7 @@
 	{
 		"name": "Dragonstar Rider",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -804,7 +804,7 @@
 	{
 		"name": "Dragontail Savior",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -813,7 +813,7 @@
 	{
 		"name": "Dread Clannfear",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "6",
@@ -822,7 +822,7 @@
   {
 		"name": "Dremora Markynaz",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "10",
 		"attack": "5",
@@ -831,7 +831,7 @@
 	{
 		"name": "Dres Guard",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -840,7 +840,7 @@
 	{
 		"name": "Dres Renegade",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "4",
@@ -849,7 +849,7 @@
 	{
 		"name": "Dres Tormentor",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -858,14 +858,14 @@
 	{
 		"name": "Dreugh Shell Armor",
 		"type": "Item",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Dune Rogue",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "3",
@@ -874,7 +874,7 @@
 	{
 		"name": "Dune Smuggler",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -883,7 +883,7 @@
 	{
 		"name": "Dune Stalker",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "3",
@@ -892,7 +892,7 @@
 	{
 		"name": "Dunmer Nightblade",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -901,14 +901,14 @@
 	{
 		"name": "Dwarven Armaments",
 		"type": "Item",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Dwarven Ballista",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "6",
 		"attack": "5",
@@ -917,7 +917,7 @@
 	{
 		"name": "Dwarven Centurion",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Epic",
 		"cost": "7",
 		"attack": "6",
@@ -926,7 +926,7 @@
 	{
 		"name": "Dwarven Sphere",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -935,7 +935,7 @@
 	{
 		"name": "Dwarven Spider",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "0",
 		"attack": "0",
@@ -944,7 +944,7 @@
 	{
 		"name": "Earthbone Spinner",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -953,7 +953,7 @@
 	{
 		"name": "Eastmarch Crusader",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "4",
@@ -962,14 +962,14 @@
 	{
 		"name": "Edict of Azura",
 		"type": "Action",
-		"attribute": "willpower/endurance",
+		"attribute": "Willpower/Endurance",
 		"rarity": "Epic",
 		"cost": "4"
 	},
 	{
 		"name": "Elder Centaur",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "5",
@@ -978,42 +978,42 @@
 	{
 		"name": "Elixir of Conflict",
 		"type": "Support",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Elixir of Deflection",
 		"type": "Support",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "5"
 	},
 	{
 		"name": "Elixir of Light Feet",
 		"type": "Support",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Elixir of the Defender",
 		"type": "Support",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Elixir of Vigor",
 		"type": "Support",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Elusive Schemer",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "4",
@@ -1022,14 +1022,14 @@
 	{
 		"name": "Enchanted Plate",
 		"type": "Item",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2"
 	},
 	{
 		"name": "Enraged Mudcrab",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "2",
@@ -1038,7 +1038,7 @@
 	{
 		"name": "Evermore Steward",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "1",
@@ -1047,14 +1047,14 @@
 	{
 		"name": "Execute",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Expert Atromancer",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "3",
@@ -1063,7 +1063,7 @@
 	{
 		"name": "Falinesti Reaver",
 		"type": "Creature",
-		"attribute": "strength/agility",
+		"attribute": "Strength/Agility",
 		"rarity": "Epic",
 		"cost": "8",
 		"attack": "5",
@@ -1072,7 +1072,7 @@
 	{
 		"name": "Farsight Nereid",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -1081,7 +1081,7 @@
 	{
 		"name": "Fate Weaver",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "6",
 		"attack": "3",
@@ -1090,7 +1090,7 @@
 	{
 		"name": "Fate's Witness",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "6",
 		"attack": "3",
@@ -1099,7 +1099,7 @@
 	{
 		"name": "Fearless Northlander",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "2",
@@ -1108,7 +1108,7 @@
 	{
 		"name": "Feasting Vulture",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -1117,7 +1117,7 @@
 	{
 		"name": "Ferocious Dreugh",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "3",
@@ -1126,7 +1126,7 @@
 	{
 		"name": "Fharun Defender",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "1",
@@ -1135,7 +1135,7 @@
 	{
 		"name": "Fiery Imp",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -1144,7 +1144,7 @@
 	{
 		"name": "Fifth Legion Trainer",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "1",
@@ -1153,7 +1153,7 @@
 	{
 		"name": "Fighters Guild Recruit",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "1",
@@ -1162,35 +1162,35 @@
 	{
 		"name": "Finish Off",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "2"
 	},
 	{
 		"name": "Fire Storm",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Fireball",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Firebolt",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Flesh Atronach",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "1",
@@ -1199,7 +1199,7 @@
 	{
 		"name": "Forsworn Guide",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "1",
@@ -1208,7 +1208,7 @@
 	{
 		"name": "Fortress Watchman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "5",
@@ -1217,7 +1217,7 @@
 	{
 		"name": "Frenzied Witchman",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -1226,7 +1226,7 @@
   {
 		"name": "Frostbite Spider",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -1235,7 +1235,7 @@
 	{
 		"name": "General Tullius",
 		"type": "Creature",
-		"attribute": "willpower/endurance",
+		"attribute": "Willpower/Endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "2",
@@ -1244,7 +1244,7 @@
 	{
 		"name": "Giant Bat",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -1253,7 +1253,7 @@
 	{
 		"name": "Giant Snake",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -1262,14 +1262,14 @@
 	{
 		"name": "Gladiator Arena",
 		"type": "Support",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "3"
 	},
 	{
 		"name": "Glenumbra Sorceress",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "5",
@@ -1278,7 +1278,7 @@
 	{
 		"name": "Gloom Wraith",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -1287,7 +1287,7 @@
 	{
 		"name": "Goblin Skulk",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "2",
@@ -1296,14 +1296,14 @@
 	{
 		"name": "Goldbrand",
 		"type": "Support",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Legendary",
 		"cost": "7"
 	},
 	{
 		"name": "Golden Saint",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "6",
 		"attack": "4",
@@ -1312,7 +1312,7 @@
 	{
 		"name": "Gortwog gro-Nagrom",
 		"type": "Creature",
-		"attribute": "strength/endurance",
+		"attribute": "Strength/Endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "4",
@@ -1321,7 +1321,7 @@
 	{
 		"name": "Grahtwood Ambusher",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -1330,7 +1330,7 @@
 	{
 		"name": "Graystone Ravager",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "4",
@@ -1339,7 +1339,7 @@
 	{
 		"name": "Green Pact Stalker",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -1348,7 +1348,7 @@
 	{
 		"name": "Green-Touched Spriggan",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "1",
@@ -1357,7 +1357,7 @@
 	{
 		"name": "Greenheart Knight",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "1",
@@ -1366,7 +1366,7 @@
 	{
 		"name": "Grim Champion",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "2",
@@ -1375,7 +1375,7 @@
 	{
 		"name": "Guild Recruit",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "1",
@@ -1384,7 +1384,7 @@
 	{
 		"name": "Haafingar Marauder",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -1393,21 +1393,21 @@
 	{
 		"name": "Hackwing Feather",
 		"type": "Item",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "3"
 	},
 	{
 		"name": "Halls of the Dwemer",
 		"type": "Support",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Haunting Spirit",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -1416,35 +1416,35 @@
 	{
 		"name": "Healing Hands",
 		"type": "Action",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "0"
 	},
 	{
 		"name": "Healing Potion",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Heavy Battleaxe",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "4"
 	},
 	{
 		"name": "Heirloom Greatsword",
 		"type": "Item",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Helgen Squad Leader",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "0",
@@ -1453,7 +1453,7 @@
 	{
 		"name": "Helstrom Footpad",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "3",
@@ -1462,7 +1462,7 @@
 	{
 		"name": "Hero of Anvil",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -1471,14 +1471,14 @@
 	{
 		"name": "Hidden Trail",
 		"type": "Support",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4"
 	},
 	{
 		"name": "High King Emeric",
 		"type": "Creature",
-		"attribute": "intelligence/endurance",
+		"attribute": "Intelligence/Endurance",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "5",
@@ -1487,7 +1487,7 @@
 	{
 		"name": "High Rock Summoner",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "1",
@@ -1496,7 +1496,7 @@
 	{
 		"name": "Highland Lurcher",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "6",
 		"attack": "7",
@@ -1505,7 +1505,7 @@
 	{
 		"name": "Hist Speaker",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -1514,7 +1514,7 @@
 	{
 		"name": "Hive Defender",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -1523,7 +1523,7 @@
 	{
 		"name": "Hive Warrior",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "6",
@@ -1532,7 +1532,7 @@
 	{
 		"name": "Hive Worker",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -1541,7 +1541,7 @@
 	{
 		"name": "House Kinsman",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "3",
@@ -1550,21 +1550,21 @@
 	{
 		"name": "Ice Spike",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2"
 	},
 	{
 		"name": "Ice Storm",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Ice Wraith",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "2",
@@ -1573,7 +1573,7 @@
 	{
 		"name": "Iliac Sorcerer",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "1",
 		"attack": "1",
@@ -1582,21 +1582,21 @@
 	{
 		"name": "Immolating Blast",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Imperial Armor",
 		"type": "Item",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "3"
 	},
 	{
 		"name": "Imperial Legionnaire",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -1605,21 +1605,21 @@
 	{
 		"name": "Imperial Might",
 		"type": "Support",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "5"
 	},
 	{
 		"name": "Imperial Reinforcements",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Imperial Siege Engine",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "3",
@@ -1628,14 +1628,14 @@
   {
 		"name": "Imprison",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "1"
 	},
 	{
 		"name": "Imprisoned Deathlord",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "7",
@@ -1644,14 +1644,14 @@
 	{
 		"name": "Improvised Weapon",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "0"
 	},
 	{
 		"name": "Indoril Archmage",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "8",
 		"attack": "6",
@@ -1660,7 +1660,7 @@
 	{
 		"name": "Initiate of Hircine",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "4",
@@ -1669,14 +1669,14 @@
 	{
 		"name": "Intimidate",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Iron Atronach",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "12",
 		"attack": "12",
@@ -1685,7 +1685,7 @@
 	{
 		"name": "Jerall Forager",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -1694,7 +1694,7 @@
 	{
 		"name": "Keeper of Whispers",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "3",
@@ -1703,7 +1703,7 @@
 	{
 		"name": "Kvatch Soldier",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -1712,7 +1712,7 @@
 	{
 		"name": "Leaflurker",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -1721,14 +1721,14 @@
 	{
 		"name": "Leafwater Blessing",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "2"
 	},
 	{
 		"name": "Legion Praefect",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "7",
 		"attack": "4",
@@ -1737,28 +1737,28 @@
 	{
 		"name": "Legion Shield",
 		"type": "Item",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Lesser Ward",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "0"
 	},
 	{
 		"name": "Lightning Bolt",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "4"
 	},
 	{
 		"name": "Lillandril Hexmage",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "5",
 		"attack": "4",
@@ -1767,7 +1767,7 @@
 	{
 		"name": "Lion Guard Strategist",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "2",
@@ -1776,7 +1776,7 @@
 	{
 		"name": "Lowland Troll",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "7",
 		"attack": "4",
@@ -1785,7 +1785,7 @@
 	{
 		"name": "Loyal Housecarl",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "2",
@@ -1794,7 +1794,7 @@
 	{
 		"name": "Lucien Lachance",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "1",
@@ -1803,7 +1803,7 @@
 	{
 		"name": "Lumbering Ogrim",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "7",
@@ -1812,7 +1812,7 @@
 	{
 		"name": "Lurking Crocodile",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "3",
@@ -1821,7 +1821,7 @@
 	{
 		"name": "Lurking Mummy",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "5",
 		"attack": "2",
@@ -1830,14 +1830,14 @@
 	{
 		"name": "Mace of Encumbrance",
 		"type": "Item",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Mage Slayer",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "3",
@@ -1846,21 +1846,21 @@
 	{
 		"name": "Mages Guild Retreat",
 		"type": "Support",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "7"
 	},
 	{
 		"name": "Malefic Wreath",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Mantikora",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "10",
 		"attack": "6",
@@ -1869,14 +1869,14 @@
 	{
 		"name": "Maple Shield",
 		"type": "Item",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "0"
 	},
 	{
 		"name": "Markarth Bannerman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -1885,7 +1885,7 @@
 	{
 		"name": "Master of Arms",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "4",
@@ -1894,7 +1894,7 @@
 	{
 		"name": "Master of Thieves",
 		"type": "Creature",
-		"attribute": "willpower/agility",
+		"attribute": "Willpower/Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -1903,14 +1903,14 @@
 	{
 		"name": "Mentor's Ring",
 		"type": "Item",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "5"
 	},
 	{
 		"name": "Merric-at-Aswala",
 		"type": "Creature",
-		"attribute": "strength/intelligence",
+		"attribute": "Strength/Intelligence",
 		"rarity": "Legendary",
 		"cost": "7",
 		"attack": "2",
@@ -1919,14 +1919,14 @@
 	{
 		"name": "Midnight Sweep",
 		"type": "Action",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Mighty Ally",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -1935,7 +1935,7 @@
 	{
 		"name": "Militant Chieftain",
 		"type": "Creature",
-		"attribute": "strength/endurance",
+		"attribute": "Strength/Endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -1944,7 +1944,7 @@
 	{
 		"name": "Miraak, Dragonborn",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "11",
 		"attack": "5",
@@ -1953,14 +1953,14 @@
 	{
 		"name": "Moment of Clarity",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "2"
 	},
 	{
 		"name": "Moonlight Werebat",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -1969,7 +1969,7 @@
 	{
 		"name": "Morkul Gatekeeper",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -1978,7 +1978,7 @@
 	{
 		"name": "Morthal Executioner",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "2",
@@ -1987,7 +1987,7 @@
 	{
 		"name": "Morthal Watchman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "2",
@@ -1996,7 +1996,7 @@
 	{
 		"name": "Mountain Tyrant",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "6",
 		"attack": "6",
@@ -2005,7 +2005,7 @@
 	{
 		"name": "Mournhold Guardian",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "2",
@@ -2014,7 +2014,7 @@
 	{
 		"name": "Mournhold Traitor",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "4",
@@ -2023,21 +2023,21 @@
 	{
 		"name": "Mummify",
 		"type": "Action",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3"
 	},
   {
 		"name": "Mundus Stone",
 		"type": "Support",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Legendary",
 		"cost": "4"
 	},
 	{
 		"name": "Murkwater Butcher",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -2046,7 +2046,7 @@
 	{
 		"name": "Murkwater Goblin",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "0",
 		"attack": "0",
@@ -2055,7 +2055,7 @@
 	{
 		"name": "Murkwater Savage",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "2",
@@ -2064,7 +2064,7 @@
 	{
 		"name": "Murkwater Shaman",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "3",
@@ -2073,7 +2073,7 @@
 	{
 		"name": "Murkwater Skirmisher",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -2082,7 +2082,7 @@
 	{
 		"name": "Murkwater Witch",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "1",
@@ -2091,7 +2091,7 @@
 	{
 		"name": "Nahagliiv",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "7",
 		"attack": "7",
@@ -2100,7 +2100,7 @@
 	{
 		"name": "Nahkriin, Dragon Priest",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "10",
 		"attack": "5",
@@ -2109,7 +2109,7 @@
 	{
 		"name": "Necrom Mastermind",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -2118,21 +2118,21 @@
 	{
 		"name": "Necromancer's Amulet",
 		"type": "Support",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "3"
 	},
 	{
 		"name": "Nest of Vipers",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "10"
 	},
 	{
 		"name": "Niben Bay Cutthroat",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "1",
 		"attack": "1",
@@ -2141,7 +2141,7 @@
 	{
 		"name": "Night Patrol",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "5",
@@ -2150,7 +2150,7 @@
 	{
 		"name": "Night Predator",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "5",
@@ -2159,7 +2159,7 @@
 	{
 		"name": "Night Shadow",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "6",
@@ -2168,7 +2168,7 @@
 	{
 		"name": "Night Talon Lord",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "8",
@@ -2177,7 +2177,7 @@
 	{
 		"name": "Nimble Ally",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -2186,7 +2186,7 @@
 	{
 		"name": "Nord Firebrand",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "0",
 		"attack": "1",
@@ -2195,7 +2195,7 @@
 	{
 		"name": "Northpoint Captain",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "4",
@@ -2204,7 +2204,7 @@
 	{
 		"name": "Northpoint Lieutenant",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "4",
@@ -2213,14 +2213,14 @@
 	{
 		"name": "Northwind Outpost",
 		"type": "Support",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Odahviing",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Legendary",
 		"cost": "12",
 		"attack": "10",
@@ -2229,7 +2229,7 @@
 	{
 		"name": "Oldgate Warden",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "0",
@@ -2238,14 +2238,14 @@
 	{
 		"name": "Orb of Vaermina",
 		"type": "Support",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Legendary",
 		"cost": "6"
 	},
 	{
 		"name": "Orc Clan Captain",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "2",
@@ -2254,7 +2254,7 @@
 	{
 		"name": "Orc Clan Shaman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "3",
@@ -2263,7 +2263,7 @@
 	{
 		"name": "Orc Clansman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "2",
@@ -2272,14 +2272,14 @@
 	{
 		"name": "Orcish Warhammer",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Pack Wolf",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -2288,7 +2288,7 @@
 	{
 		"name": "Pahmar-raht Renegade",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -2297,14 +2297,14 @@
 	{
 		"name": "Piercing Javelin",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "5"
 	},
 	{
 		"name": "Pillaging Tribune",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "5",
@@ -2313,7 +2313,7 @@
 	{
 		"name": "Pit Lion",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "5",
@@ -2322,21 +2322,21 @@
 	{
 		"name": "Plea to Kynareth",
 		"type": "Action",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Plunder",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "2"
 	},
 	{
 		"name": "Portcullis",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "5",
 		"attack": "0",
@@ -2345,7 +2345,7 @@
 	{
 		"name": "Preserver of the Root",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -2354,7 +2354,7 @@
 	{
 		"name": "Priest of the Moons",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2363,7 +2363,7 @@
 	{
 		"name": "Queen Barenziah",
 		"type": "Creature",
-		"attribute": "intelligence/agility",
+		"attribute": "Intelligence/Agility",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "6",
@@ -2372,7 +2372,7 @@
 	{
 		"name": "Quin'rawl Burglar",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "4",
@@ -2381,7 +2381,7 @@
 	{
 		"name": "Quin'Rawl Skulker",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "6",
 		"attack": "4",
@@ -2390,14 +2390,14 @@
 	{
 		"name": "Raiding Party",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Rajhini Highwayman",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -2406,7 +2406,7 @@
 	{
 		"name": "Rampaging Minotaur",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -2415,21 +2415,21 @@
 	{
 		"name": "Ransack",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "6"
 	},
 	{
 		"name": "Rapid Shot",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Ravenous Crocodile",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "3",
@@ -2438,7 +2438,7 @@
   {
 		"name": "Ravenous Hunger",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "4",
@@ -2447,7 +2447,7 @@
 	{
 		"name": "Reachman Shaman",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2456,7 +2456,7 @@
 	{
 		"name": "Reclusive Giant",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "8",
 		"attack": "8",
@@ -2465,7 +2465,7 @@
 	{
 		"name": "Red Bramman",
 		"type": "Creature",
-		"attribute": "agility/endurance",
+		"attribute": "Agility/Endurance",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "5",
@@ -2474,7 +2474,7 @@
 	{
 		"name": "Redoran Enforcer",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2483,7 +2483,7 @@
 	{
 		"name": "Reive, Blademaster",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "2",
@@ -2492,7 +2492,7 @@
 	{
 		"name": "Relentless Raider",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "1",
 		"attack": "2",
@@ -2501,7 +2501,7 @@
 	{
 		"name": "Renowned Legate",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "7",
 		"attack": "5",
@@ -2510,7 +2510,7 @@
 	{
 		"name": "Resolute Ally",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -2519,7 +2519,7 @@
 	{
 		"name": "Restless Templar",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "5",
@@ -2528,7 +2528,7 @@
 	{
 		"name": "Rift Thane",
 		"type": "Creature",
-		"attribute": "strength/willpower",
+		"attribute": "Strength/Willpower",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "2",
@@ -2537,7 +2537,7 @@
 	{
 		"name": "Riften Pillager",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -2546,7 +2546,7 @@
 	{
 		"name": "Rihad Battlemage",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -2555,7 +2555,7 @@
 	{
 		"name": "Rihad Horseman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2564,7 +2564,7 @@
 	{
 		"name": "Rihad Nomad",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2573,7 +2573,7 @@
 	{
 		"name": "Rising Legate",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Legendary",
 		"cost": "7",
 		"attack": "5",
@@ -2582,7 +2582,7 @@
 	{
 		"name": "Riverhold Escort",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "1",
@@ -2591,7 +2591,7 @@
 	{
 		"name": "Rotting Draugr",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -2600,7 +2600,7 @@
 	{
 		"name": "Royal Sage",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "4",
@@ -2609,7 +2609,7 @@
 	{
 		"name": "Sadras Agent",
 		"type": "Creature",
-		"attribute": "intelligence/agility",
+		"attribute": "Intelligence/Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -2618,7 +2618,7 @@
 	{
 		"name": "Savage Ogre",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "7",
 		"attack": "5",
@@ -2627,14 +2627,14 @@
 	{
 		"name": "Scouting Patrol",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Scuttler",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -2643,7 +2643,7 @@
 	{
 		"name": "Senche-Tiger",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "6",
 		"attack": "4",
@@ -2652,14 +2652,14 @@
 	{
 		"name": "Sentinel Battlemace",
 		"type": "Item",
-		"attribute": "strength/intelligence",
+		"attribute": "Strength/Intelligence",
 		"rarity": "Epic",
 		"cost": "4"
 	},
 	{
 		"name": "Septim Guardsman",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "0",
 		"attack": "1",
@@ -2668,14 +2668,14 @@
 	{
 		"name": "Shadow Shift",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Shadowfen Priest",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -2684,7 +2684,7 @@
 	{
 		"name": "Sharpshooter Scout",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -2693,7 +2693,7 @@
 	{
 		"name": "Shimmerene Peddler",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "2",
@@ -2702,7 +2702,7 @@
 	{
 		"name": "Shocking Wamasu",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "8",
 		"attack": "4",
@@ -2711,7 +2711,7 @@
 	{
 		"name": "Shornhelm Champion",
 		"type": "Creature",
-		"attribute": "intelligence/endurance",
+		"attribute": "Intelligence/Endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -2720,7 +2720,7 @@
 	{
 		"name": "Shrieking Harpy",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2729,7 +2729,7 @@
 	{
 		"name": "Siege Catapult",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "5",
@@ -2738,7 +2738,7 @@
 	{
 		"name": "Silvenar Tracker",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "3",
@@ -2747,7 +2747,7 @@
 	{
 		"name": "Skaven Pyromancer",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -2756,7 +2756,7 @@
 	{
 		"name": "Skilled Blacksmith",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "2",
@@ -2765,7 +2765,7 @@
 	{
 		"name": "Skingrad Patroller",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "3",
@@ -2774,14 +2774,14 @@
 	{
 		"name": "Skirmisher's Elixir",
 		"type": "Support",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Skooma Racketeer",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "2",
@@ -2790,7 +2790,7 @@
 	{
 		"name": "Skywatch Vindicator",
 		"type": "Creature",
-		"attribute": "intelligence/willpower",
+		"attribute": "Intelligence/Willpower",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "4",
@@ -2799,7 +2799,7 @@
 	{
 		"name": "Slaughterfish",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "1",
@@ -2808,21 +2808,21 @@
 	{
 		"name": "Slaughterfish Spawning",
 		"type": "Action",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Snake tooth Necklace",
 		"type": "Item",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Snapping Dreugh",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -2831,7 +2831,7 @@
 	{
 		"name": "Snow Wolf",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "1",
@@ -2840,7 +2840,7 @@
 	{
 		"name": "Snowy Sabre Cat",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -2849,14 +2849,14 @@
 	{
 		"name": "Soul Split",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2"
 	},
   {
 		"name": "Soulrest Marshal",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "4",
@@ -2865,7 +2865,7 @@
 	{
 		"name": "Sparking Spider",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "2",
@@ -2874,7 +2874,7 @@
 	{
 		"name": "Spider Daedra",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "8",
 		"attack": "4",
@@ -2883,14 +2883,14 @@
 	{
 		"name": "Spider Lair",
 		"type": "Support",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "7"
 	},
 	{
 		"name": "Spider Worker",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "0",
@@ -2899,7 +2899,7 @@
 	{
 		"name": "Spiteful Dremora",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -2908,14 +2908,14 @@
 	{
 		"name": "Staff of Sparks",
 		"type": "Item",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "6"
 	},
 	{
 		"name": "Stalking Crocodile",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "3",
@@ -2924,7 +2924,7 @@
 	{
 		"name": "Stalwart Ally",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "3",
@@ -2933,7 +2933,7 @@
 	{
 		"name": "Stampeding Mammoth",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "4",
@@ -2942,7 +2942,7 @@
 	{
 		"name": "Starved Hunger",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "4",
@@ -2951,28 +2951,28 @@
 	{
 		"name": "Steel Scimitar",
 		"type": "Item",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "1"
 	},
 	{
 		"name": "Steel Sword",
 		"type": "Item",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "2"
 	},
 	{
 		"name": "Stone Throw",
 		"type": "Action",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "3"
 	},
 	{
 		"name": "Stonetooth Scrapper",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "4",
@@ -2981,7 +2981,7 @@
 	{
 		"name": "Stormhold Henchman",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -2990,7 +2990,7 @@
 	{
 		"name": "Stronghold Eradicator",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "6",
@@ -2999,7 +2999,7 @@
 	{
 		"name": "Stronghold Incubator",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -3008,7 +3008,7 @@
 	{
 		"name": "Stronghold Prototype",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "3",
@@ -3017,7 +3017,7 @@
 	{
 		"name": "Student of Arms",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "4",
@@ -3026,7 +3026,7 @@
 	{
 		"name": "Studium Headmaster",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "6",
@@ -3035,14 +3035,14 @@
 	{
 		"name": "Summerset Orrery",
 		"type": "Support",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "6"
 	},
 	{
 		"name": "Summerset Shieldmage",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -3051,7 +3051,7 @@
 	{
 		"name": "Sunhold Medic",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "1",
 		"attack": "1",
@@ -3060,14 +3060,14 @@
 	{
 		"name": "Suppress",
 		"type": "Action",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "0"
 	},
 	{
 		"name": "Supreme Atromancer",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "3",
@@ -3076,7 +3076,7 @@
 	{
 		"name": "Swamp Leviathan",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "7",
 		"attack": "8",
@@ -3085,14 +3085,14 @@
 	{
 		"name": "Swift Strike",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Tazkad the Packmaster",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "8",
 		"attack": "6",
@@ -3101,7 +3101,7 @@
 	{
 		"name": "Telvanni Arcanist",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -3110,7 +3110,7 @@
 	{
 		"name": "Tenmar Swiftclaw",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "2",
@@ -3119,7 +3119,7 @@
 	{
 		"name": "Territorial Viper",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "1",
@@ -3128,14 +3128,14 @@
 	{
 		"name": "Thievery",
 		"type": "Action",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3"
 	},
 	{
 		"name": "Thieves Guild Recruit",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "1",
@@ -3144,14 +3144,14 @@
 	{
 		"name": "Thieves' Den",
 		"type": "Support",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "4"
 	},
 	{
 		"name": "Thorn Histmage",
 		"type": "Creature",
-		"attribute": "agility/endurance",
+		"attribute": "Agility/Endurance",
 		"rarity": "Epic",
 		"cost": "5",
 		"attack": "2",
@@ -3160,14 +3160,14 @@
 	{
 		"name": "Tome of Alteration",
 		"type": "Item",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Common",
 		"cost": "4"
 	},
 	{
 		"name": "Torval Crook",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "1",
@@ -3176,7 +3176,7 @@
 	{
 		"name": "Tower Alchemist",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "2",
@@ -3185,7 +3185,7 @@
 	{
 		"name": "Trebuchet",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "0",
@@ -3194,7 +3194,7 @@
 	{
 		"name": "Tree Minder",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "1",
@@ -3203,7 +3203,7 @@
 	{
 		"name": "Triumphant Jarl",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "6",
 		"attack": "4",
@@ -3212,7 +3212,7 @@
 	{
 		"name": "Tusked Bristleback",
 		"type": "Creature",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Common",
 		"cost": "5",
 		"attack": "5",
@@ -3221,7 +3221,7 @@
 	{
 		"name": "Twilight Werebat",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "4",
 		"attack": "4",
@@ -3230,14 +3230,14 @@
 	{
 		"name": "Two-Moons Contemplation",
 		"type": "Support",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "3"
 	},
 	{
 		"name": "Tyr",
 		"type": "Creature",
-		"attribute": "strength/willpower",
+		"attribute": "Strength/Willpower",
 		"rarity": "Legendary",
 		"cost": "4",
 		"attack": "5",
@@ -3246,7 +3246,7 @@
 	{
 		"name": "Ungolim the Listener",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Legendary",
 		"cost": "1",
 		"attack": "2",
@@ -3255,7 +3255,7 @@
 	{
 		"name": "Valenwood Huntsman",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -3264,7 +3264,7 @@
   {
 		"name": "Valenwood Trapper",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "3",
@@ -3273,7 +3273,7 @@
 	{
 		"name": "Varanis Courier",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "1",
@@ -3282,7 +3282,7 @@
 	{
 		"name": "Vicious Dreugh",
 		"type": "Creature",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Rare",
 		"cost": "4",
 		"attack": "3",
@@ -3291,7 +3291,7 @@
 	{
 		"name": "Vigilant Giant",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "8",
 		"attack": "8",
@@ -3300,14 +3300,14 @@
 	{
 		"name": "Volendrung",
 		"type": "Support",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "8"
 	},
 	{
 		"name": "Volkihar Lord",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Legendary",
 		"cost": "9",
 		"attack": "7",
@@ -3316,7 +3316,7 @@
 	{
 		"name": "Voracious Spriggan",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Rare",
 		"cost": "1",
 		"attack": "2",
@@ -3325,21 +3325,21 @@
 	{
 		"name": "Wabbajack",
 		"type": "Support",
-		"attribute": "neutral",
+		"attribute": "Neutral",
 		"rarity": "Legendary",
 		"cost": "5"
 	},
 	{
 		"name": "War Cry",
 		"type": "Action",
-		"attribute": "willpower",
+		"attribute": "Willpower",
 		"rarity": "Rare",
 		"cost": "4"
 	},
 	{
 		"name": "Wardcrafter",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Rare",
 		"cost": "2",
 		"attack": "2",
@@ -3348,7 +3348,7 @@
 	{
 		"name": "Watch Commander",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "5",
 		"attack": "4",
@@ -3357,7 +3357,7 @@
 	{
 		"name": "Whirling Duelist",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "5",
@@ -3366,7 +3366,7 @@
 	{
 		"name": "Whiterun Recruit",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "4",
@@ -3375,7 +3375,7 @@
 	{
 		"name": "Whiterun Trooper",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Common",
 		"cost": "4",
 		"attack": "6",
@@ -3384,7 +3384,7 @@
 	{
 		"name": "Wild Beastcaller",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "3",
@@ -3393,7 +3393,7 @@
 	{
 		"name": "Wild Spriggan",
 		"type": "Creature",
-		"attribute": "agility",
+		"attribute": "Agility",
 		"rarity": "Epic",
 		"cost": "6",
 		"attack": "3",
@@ -3402,7 +3402,7 @@
 	{
 		"name": "Wind Keep Spellsword",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "2",
 		"attack": "2",
@@ -3411,28 +3411,28 @@
 	{
 		"name": "Winter's Grasp",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "5"
 	},
 	{
 		"name": "Winter's Touch",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "5"
 	},
 	{
 		"name": "Wisdom of Ancients",
 		"type": "Action",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "2"
 	},
 	{
 		"name": "Wispmother",
 		"type": "Creature",
-		"attribute": "intelligence",
+		"attribute": "Intelligence",
 		"rarity": "Epic",
 		"cost": "7",
 		"attack": "5",
@@ -3441,7 +3441,7 @@
 	{
 		"name": "Withered Hand Cultist",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "3",
 		"attack": "3",
@@ -3450,7 +3450,7 @@
 	{
 		"name": "Wood Orc Headhunter",
 		"type": "Creature",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Legendary",
 		"cost": "5",
 		"attack": "5",
@@ -3459,7 +3459,7 @@
 	{
 		"name": "Wrothgar Artisan",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Common",
 		"cost": "3",
 		"attack": "2",
@@ -3468,14 +3468,14 @@
 	{
 		"name": "Wrothgar Forge",
 		"type": "Support",
-		"attribute": "strength",
+		"attribute": "Strength",
 		"rarity": "Epic",
 		"cost": "7"
 	},
 	{
 		"name": "Wrothgar Kingpin",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Epic",
 		"cost": "2",
 		"attack": "1",
@@ -3484,14 +3484,14 @@
 	{
 		"name": "Yew Shield",
 		"type": "Item",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "2"
 	},
 	{
 		"name": "Young Mammoth",
 		"type": "Creature",
-		"attribute": "endurance",
+		"attribute": "Endurance",
 		"rarity": "Rare",
 		"cost": "3",
 		"attack": "4",
