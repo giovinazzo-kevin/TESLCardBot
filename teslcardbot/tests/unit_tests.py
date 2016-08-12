@@ -20,12 +20,10 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(Card._escape_name('{{{HOHO}}}}}'), 'hoho')
 
     def test_get_info(self):
-        Card.preload_card_data(path='../data/cards.json')
+        Card.preload_card_data()
         self.assertEqual(str(Card.get_info('tyr')), 'strength/willpower | Legendary '
                                                '| Tyr [📷](http://www.legends-decks.com/img_cards/tyr.png) '
                                                '| Creature | 4 | 5 | 4')
-
-        print(self.bot.build_response(['tyr']))
 
 
 if __name__ == '__main__':

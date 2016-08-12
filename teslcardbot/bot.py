@@ -11,8 +11,11 @@ class Card:
     JSON_DATA = []
 
     @staticmethod
-    def preload_card_data(path='teslcardbot/data/cards.json'):
-        with open(path) as f:
+    def preload_card_data(path='data\\cards.json'):
+        dir = os.path.dirname(__file__)
+        filename = os.path.join(dir, path)
+
+        with open(filename) as f:
             Card.JSON_DATA = json.load(f)
 
     @staticmethod
