@@ -142,15 +142,15 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Attribute | Rarity | Name | Type | Cost | Power | Health\n\n---|---|----|----|----|----|----\n\n'
+        response = 'Attribute | Rarity | Name | Type | Cost | Power | Health\n---|---|----|----|----|----|----\n'
 
         for name in cards:
             card = Card.get_info(name)
             if card is None:
                 card = Card('{} (Typo?)'.format(name), 'http://imgur.com/1Lxy3DA')
-            response += '{}\n\n'.format(str(card))
+            response += '{}\n'.format(str(card))
 
-        response += '&nbsp;\n\n^(_I am a bot, and this action was performed automatically. ' \
+        response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed automatically. ' \
                     'For information or to submit a bug report, please contact /u/{}._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
                     '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author, self.author)
