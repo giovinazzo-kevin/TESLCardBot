@@ -158,10 +158,9 @@ class TESLCardBot:
                             health=random.choice(boolshit_values))
             response += '{}\n'.format(str(card))
 
-        response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed automatically. ' \
-                    'For information or to submit a bug report, please contact /u/{}._)' \
+        response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed automagically._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
-                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author, self.author)
+                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author)
         return response
 
     def log(self, msg):
