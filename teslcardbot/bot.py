@@ -24,6 +24,10 @@ class TESLCardBot:
 
     @staticmethod
     def get_card_info(card):
+        # Easter egg!
+        if card == 'teslcardbot':
+            return 'https://imgs.xkcd.com/comics/tabletop_roleplaying.png'
+
         return TESLCardBot.CARD_DATABASE_URL.format(card)
 
     @staticmethod
@@ -31,32 +35,6 @@ class TESLCardBot:
         req = requests.get(card_info)
         return req.headers['content-type'] == 'image/png'
 
-    # TODO: Make this template-able, maybe?
-    def build_response(self, cards):
-        response = 'Here are the cards you mentioned: \n\n'
-        for card in cards:
-            card_name = TESLCardBot.escape_card_name(card)
-            if len(card_name) <= 0:
-                continue
-
-            info = TESLCardBot.get_card_info(card_name)
-            # Check if the given card is a valid card
-            if TESLCardBot.is_valid_info(info):
-                response += '- [{}]({})\n\n'.format(card.title(), info)
-            else:
-                response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
-        response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
-                    'For information or to submit a bug report, please contact /u/​G3Kappa._)'
-        response += '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
-                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author)
-        return response
-
-    def log(self, msg):
-        print('TESLCardBot# {}'.format(msg))
-
-
-    # Safe concurrency is only guaranteed if each thread has its own praw instance.
-    # Technically it does not guarantee safety if both threads log into the same user, but it should be fine.
     def _get_praw_instance(self):
         r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(self.author))
         r.login(username=os.environ['REDDIT_USERNAME'], password=os.environ['REDDIT_PASSWORD'], disable_warning=True)
@@ -85,6 +63,30 @@ class TESLCardBot:
                 self.log('Done replying and saved comment. ({})'.format(c.id))
             except:
                 self.log('There was an error while trying to reply to: {}.'.format(c.id))
+
+    # TODO: Make this template-able, maybe?
+    def build_response(self, cards):
+        response = 'Here are the cards you mentioned: \n\n'
+        for card in cards:
+            card = card.title()
+            card_name = TESLCardBot.escape_card_name(card)
+            if len(card_name) <= 0:
+                continue
+
+            info = TESLCardBot.get_card_info(card_name)
+            # Check if the given card is a valid card
+            if TESLCardBot.is_valid_info(info):
+                response += '- [{}]({})\n\n'.format(card, info)
+            else:
+                response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
+        response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
+                    'For information or to submit a bug report, please contact /u/​G3Kappa._)'
+        response += '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
+                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author)
+        return response
+
+    def log(self, msg):
+        print('TESLCardBot# {}'.format(msg))
 
     def start(self, batch_limit=10, buffer_size=1000):
         r = None
