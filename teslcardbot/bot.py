@@ -177,12 +177,17 @@ class TESLCardBot:
         already_done = []
         subreddit = r.get_subreddit(self.target_sub)
         while True:
-            new_submissions = [s for s in subreddit.get_new(limit=batch_limit) if s.id not in already_done]
+            try:
+                new_submissions = [s for s in subreddit.get_new(limit=batch_limit) if s.id not in already_done]
+                new_comments = [c for c in r.get_comments(subreddit) if c.id not in already_done]
+            except praw.errors.HTTPException:
+                self.log('Reddit seems to be down! Aborting.')
+                return
+            
             for s in new_submissions:
                 self._process_submission(s)
                 # The bot will also save submissions it replies to to prevent double-posting.
                 already_done.append(s.id)
-            new_comments = [c for c in r.get_comments(subreddit) if c.id not in already_done]
             for c in new_comments:
                 self._process_comment(c)
                 # The bot will also save comments it replies to to prevent double-posting.
