@@ -1,5 +1,5 @@
 import requests
-from enum import Enum
+import random
 import json
 import praw
 import re
@@ -147,14 +147,15 @@ class TESLCardBot:
         for name in cards:
             card = Card.get_info(name)
             if card is None:
+                boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0']
                 card = Card(name=name,
                             img_url='http://imgur.com/1Lxy3DA',
                             type='Typo',
-                            attribute='None',
-                            rarity='Undefined',
-                            cost='Null',
-                            power='0',
-                            health='False')
+                            attribute=random.choice(boolshit_values),
+                            rarity=random.choice(boolshit_values),
+                            cost=random.choice(boolshit_values),
+                            power=random.choice(boolshit_values),
+                            health=random.choice(boolshit_values))
             response += '{}\n'.format(str(card))
 
         response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed automatically. ' \
