@@ -24,6 +24,10 @@ class TESLCardBot:
 
     @staticmethod
     def get_card_info(card):
+        # Easter egg!
+        if card == 'teslcardbot':
+            return 'https://imgs.xkcd.com/comics/tabletop_roleplaying.png'
+
         return TESLCardBot.CARD_DATABASE_URL.format(card)
 
     @staticmethod
@@ -59,7 +63,7 @@ class TESLCardBot:
                 self.log('Done replying and saved comment. ({})'.format(c.id))
             except:
                 self.log('There was an error while trying to reply to: {}.'.format(c.id))
-                
+
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
         response = 'Here are the cards you mentioned: \n\n'
