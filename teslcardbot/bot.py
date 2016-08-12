@@ -11,7 +11,7 @@ class Card:
     JSON_DATA = []
 
     @staticmethod
-    def preload_card_data(path='data\\cards.json'):
+    def preload_card_data(path='data/cards.json'):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, path)
 
