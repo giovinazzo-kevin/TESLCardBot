@@ -84,7 +84,7 @@ class Card:
         self.health = health
 
     def __str__(self):
-        return '{name} [📷]({url}) | {mana} | {atk} | {hp} | {type} | {attr} | {rarity}'.format(
+        return '{name} [📷]({url}) | {type} | {mana} | {atk} | {hp} | {attr} | {rarity}'.format(
             attr=self.attribute,
             rarity=self.rarity,
             name=self.name,
@@ -142,7 +142,7 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Name | Cost | Power | Health | Type | Attribute | Rarity \n---|---|----|----|----|----|----\n'
+        response = 'Name | Type | Cost | Power | Health | Attribute | Rarity \n---|---|----|----|----|----|----\n'
 
         for name in cards:
             card = Card.get_info(name)

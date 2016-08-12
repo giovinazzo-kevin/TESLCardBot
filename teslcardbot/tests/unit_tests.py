@@ -22,7 +22,7 @@ class TestParsingFunctions(unittest.TestCase):
     def test_get_info(self):
         Card.preload_card_data()
         self.assertEqual(str(Card.get_info('tyr')), 'Tyr [📷](http://www.legends-decks.com/img_cards/tyr.png) '
-                                                    '| 4 | 5 | 4 | Creature | Strength/Willpower | Legendary')
+                                                    '| Creature | 4 | 5 | 4 | Strength/Willpower | Legendary')
 
 
 if __name__ == '__main__':
