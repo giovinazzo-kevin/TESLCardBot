@@ -34,9 +34,9 @@ class Card:
         if name == 'teslcardbot':  # I wonder...
             return Card('TESLCardBot', 'https://imgs.xkcd.com/comics/tabletop_roleplaying.png',
                         type='Bot',
-                        attribute='intelligence',
+                        attribute='Python',
                         rarity='Legendary',
-                        cost=7, power=7, health=7)
+                        cost='∞', power='∞', health='∞')
 
         # If JSON_DATA hasn't been populated yet, try to do it now or fail miserably.
         if len(Card.JSON_DATA) <= 0:
