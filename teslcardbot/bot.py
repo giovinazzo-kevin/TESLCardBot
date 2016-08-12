@@ -122,6 +122,7 @@ class TESLCardBot:
                 self.log('Done commenting and saved thread. ({})'.format(s.id))
             except:
                 self.log('There was an error while trying to comment in: {}.'.format(s.id))
+                raise
 
     def _process_comment(self, c):
         cards = TESLCardBot.find_card_mentions(c.body)
@@ -134,6 +135,7 @@ class TESLCardBot:
                 self.log('Done replying and saved comment. ({})'.format(c.id))
             except:
                 self.log('There was an error while trying to reply to: {}.'.format(c.id))
+                raise
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):

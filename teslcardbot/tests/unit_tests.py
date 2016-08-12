@@ -4,8 +4,8 @@ from teslcardbot.bot import TESLCardBot, Card
 
 class TestParsingFunctions(unittest.TestCase):
 
-    # def setUp(self):
-    #    self.bot = TESLCardBot(author='TestParsingFunctions', target_sub='TESLCardBotTesting')
+    def setUp(self):
+        self.bot = TESLCardBot(author='TestParsingFunctions', target_sub='TESLCardBotTesting')
 
     def test_find_card_mentions(self):
         # Make sure the basic functioning works
@@ -24,6 +24,8 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(str(Card.get_info('tyr')), 'strength/willpower | Legendary '
                                                '| Tyr [📷](http://www.legends-decks.com/img_cards/tyr.png) '
                                                '| Creature | 4 | 5 | 4')
+
+        print(self.bot.build_response(['tyr']))
 
 
 if __name__ == '__main__':
