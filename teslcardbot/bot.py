@@ -35,6 +35,7 @@ class TESLCardBot:
     def build_response(self, cards):
         response = 'Here are the cards you mentioned: \n\n'
         for card in cards:
+            card = card.title()
             card_name = TESLCardBot.escape_card_name(card)
             if len(card_name) <= 0:
                 continue
@@ -42,7 +43,7 @@ class TESLCardBot:
             info = TESLCardBot.get_card_info(card_name)
             # Check if the given card is a valid card
             if TESLCardBot.is_valid_info(info):
-                response += '- [{}]({})\n\n'.format(card.title(), info)
+                response += '- [{}]({})\n\n'.format(card, info)
             else:
                 response += '- {}: This card does not seem to exist. Possible typo?\n\n'.format(card)
         response += '&nbsp;\n\n___\n^(_I am a bot, and this action was performed automatically. ' \
