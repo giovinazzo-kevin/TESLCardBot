@@ -11,7 +11,7 @@ class Card:
     JSON_DATA = []
 
     @staticmethod
-    def preload_card_data(path='/data/cards.json'):
+    def preload_card_data(path='teslcardbot/data/cards.json'):
         with open(path) as f:
             Card.JSON_DATA = json.load(f)
 
