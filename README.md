@@ -1,5 +1,5 @@
 # TESLCardBot
-TESLCardBot is a Reddit bot that will fetch info about cards from _The Elder Scrolls: Legends_.
+TESLCardBot is a Reddit bot that fetches info about cards from _The Elder Scrolls: Legends_.
 
 It defaults to /r/elderscrollslegends, but can be ran on any subreddit. It is summoned by enclosing a card's name in double brackets, like this: `{{Blood Dragon}}`.
 
