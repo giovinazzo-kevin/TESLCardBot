@@ -21,7 +21,7 @@ class Card:
 
     @staticmethod
     def get_random_card(name):
-        boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0']
+        boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0', '???', '!?']
 
         def rv(v=boolshit_values):
             if random.random() < 0.01:
