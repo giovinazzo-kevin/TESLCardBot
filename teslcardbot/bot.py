@@ -142,7 +142,7 @@ class Card:
             url=self.img_url,
             type=self.type.title(),
             mana=self.cost,
-            stats='{}: {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
+            stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
             keywords=', '.join(map(str, self.keywords)) + '.' if len(self.keywords) > 0 else 'None'
         )
 
@@ -187,7 +187,7 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Name | Type | M:&nbsp;ATK/HP | Keywords | Attribute | ' \
+        response = 'Name | Type | M&nbsp;-&nbsp;ATK/HP | Keywords | Attribute | ' \
                    'Rarity \n--|--|--|--|--|--|--\n'
 
         for name in cards:
