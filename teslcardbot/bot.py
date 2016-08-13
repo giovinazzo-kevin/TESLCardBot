@@ -187,7 +187,7 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Name | Type | M: ATK/HP | Keywords | Attribute | ' \
+        response = 'Name | Type | M:&nbsp;ATK/HP | Keywords | Attribute | ' \
                    'Rarity \n--|--|--|--|--|--|--\n'
 
         for name in cards:
@@ -198,7 +198,7 @@ class TESLCardBot:
 
         auto_word = random.choice(['automatically', 'automagically'])
         response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
-                    'Special thanks to Jeremy at legends-decks.com._)' \
+                    'Special thanks to Jeremy at legends-decks._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
                     '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(auto_word, self.author)
         return response
