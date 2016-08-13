@@ -187,8 +187,8 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Name | Type | Stats (🌟: ⚔/❤️) | Keywords | Attribute | ' \
-                   'Rarity \n--|:--:|:--:|:--:|:--:|:--:|:--:\n'
+        response = 'Name | Type | M: ATK/HP | Keywords | Attribute | ' \
+                   'Rarity \n--|--|--|--|--|--|--\n'
 
         for name in cards:
             card = Card.get_info(name)
