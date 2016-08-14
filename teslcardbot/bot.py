@@ -143,7 +143,7 @@ class Card:
             type=self.type.title(),
             mana=self.cost,
             stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
-            keywords=', '.join(map(str, self.keywords)) + '.' if len(self.keywords) > 0 else 'None'
+            keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None'
         )
 
 
