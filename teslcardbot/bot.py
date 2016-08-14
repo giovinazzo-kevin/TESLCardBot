@@ -1,4 +1,5 @@
 import requests
+import urllib.parse
 import random
 import json
 import praw
@@ -6,9 +7,37 @@ import re
 import os
 
 
+def remove_duplicates(seq):
+    seen = set()
+    seen_add = seen.add
+    return [x for x in seq if not (x in seen or seen_add(x))]
+
+
 class Card:
     CARD_IMAGE_BASE_URL = 'http://www.legends-decks.com/img_cards/{}.png'
+    CARD_IMAGE_404_URL = 'http://imgur.com/1Lxy3DA'
     JSON_DATA = []
+    KEYWORDS = ['Prophecy', 'Breakthrough', 'Guard', 'Regenerate', 'Charge', 'Ward', 'Shackle',
+                'Lethal', 'Pilfer', 'Last Gasp', 'Summon', 'Drain']
+
+    @staticmethod
+    def get_random_card(name):
+        boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0', '???', '!?']
+
+        def rv(v=boolshit_values):
+            if random.random() < 0.01:
+                return 'help'  # Not really
+            return random.choice(v)
+
+        return Card(name=name,
+                    img_url=Card.CARD_IMAGE_404_URL,
+                    type='Typo',
+                    attribute_1=rv(),
+                    attribute_2=rv() if random.random() < 0.5 else '',
+                    rarity=rv(),
+                    cost=rv(),
+                    power=rv(),
+                    health=rv())
 
     @staticmethod
     def preload_card_data(path='data/cards.json'):
@@ -28,14 +57,30 @@ class Card:
         return req.headers['content-type'] == 'image/png'
 
     @staticmethod
+    def _extract_keywords(text):
+        expr = re.compile(r'(\w+(?:\sGasp)?)', re.I)
+        words = expr.findall(text)
+        # Keywords are extracted until a non-keyword word is found
+        keywords = []
+        for word in words:
+            word = word.title()
+            if word in Card.KEYWORDS:
+                keywords.append(word)
+            else:
+                break
+        return remove_duplicates(keywords)
+
+    @staticmethod
     def get_info(name):
         name = Card._escape_name(name)
 
         if name == 'teslcardbot':  # I wonder...
             return Card('TESLCardBot', 'https://imgs.xkcd.com/comics/tabletop_roleplaying.png',
                         type='Bot',
-                        attribute='Python',
+                        attribute_1='Python',
+                        attribute_2='JSON',
                         rarity='Legendary',
+                        text='If your have more health than your opponent, win the game.',
                         cost='∞', power='∞', health='∞')
 
         # If JSON_DATA hasn't been populated yet, try to do it now or fail miserably.
@@ -50,49 +95,60 @@ class Card:
         img_url = Card.CARD_IMAGE_BASE_URL.format(name)
         # Unlikely, but possible?
         if not Card._img_exists(img_url):
-            img_url = 'http://imgur.com/1Lxy3DA'
+            img_url = Card.CARD_IMAGE_404_URL
 
         name = data['name']
         type = data['type']
-        attribute = data['attribute']
+        attr_1 = data['attribute_1']
+        attr_2 = data['attribute_2']
         rarity = data['rarity']
         cost = int(data['cost'])
-        power = 'N/A'
-        health = 'N/A'
-        if type == 'Creature':
+        text = data['text']
+        power = ''
+        health = ''
+        if type == 'creature':
             power = int(data['attack'])
             health = int(data['health'])
 
         return Card(name=name,
                     img_url=img_url,
                     type=type,
-                    attribute=attribute,
+                    attribute_1=attr_1,
+                    attribute_2=attr_2,
                     rarity=rarity,
                     cost=cost,
                     power=power,
-                    health=health)
+                    health=health,
+                    text=text)
 
-    def __init__(self, name, img_url, type='Creature', attribute='neutral',
-                 rarity='Common', cost=0, power=0, health=0):
+    def __init__(self, name, img_url, type='Creature', attribute_1='neutral',
+                 attribute_2='', text='', rarity='Common', cost=0, power=0, health=0):
         self.name = name
         self.img_url = img_url
         self.type = type
-        self.attribute = attribute
+        self.attributes = [attribute_1.title(), attribute_2.title()] if len(attribute_2) > 0 else [attribute_1.title()]
         self.rarity = rarity
         self.cost = cost
         self.power = power
         self.health = health
+        self.text = text
+        self.keywords = Card._extract_keywords(text)
 
     def __str__(self):
-        return '{name} [📷]({url}) | {type} | {mana} | {atk} | {hp} | {attr} | {rarity}'.format(
-            attr=self.attribute,
-            rarity=self.rarity,
+        template = '[📖](https://www.reddit.com/message/compose/?subject={enc_text}) [📷]({url}) {name} ' \
+                   '| {type} | {stats} | {keywords} | {attrs} | {rarity}'
+
+        return template.format(
+            attrs='/'.join(map(str, self.attributes)),
+            rarity=self.rarity.title(),
             name=self.name,
             url=self.img_url,
-            type=self.type,
+            type=self.type.title(),
             mana=self.cost,
-            atk=self.power,
-            hp=self.health
+            stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
+            keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
+            enc_text=urllib.parse.quote(self.text) if len(self.text) > 0 else 'This card\'s name isn\'t in '
+                                                                              'the database. Possible typo?'
         )
 
 
@@ -100,14 +156,8 @@ class TESLCardBot:
     CARD_MENTION_REGEX = re.compile(r'\{\{((?:.*?)+)\}\}')
 
     @staticmethod
-    def _remove_duplicates(seq):
-        seen = set()
-        seen_add = seen.add
-        return [x for x in seq if not (x in seen or seen_add(x))]
-
-    @staticmethod
     def find_card_mentions(s):
-        return TESLCardBot._remove_duplicates(TESLCardBot.CARD_MENTION_REGEX.findall(s))
+        return remove_duplicates(TESLCardBot.CARD_MENTION_REGEX.findall(s))
 
     def _get_praw_instance(self):
         r = praw.Reddit('TES:L Card Fetcher by /u/{}.'.format(self.author))
@@ -142,25 +192,20 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Name | Type | Cost | Power | Health | Attribute | Rarity \n---|---|----|----|----|----|----\n'
+        response = 'Name | Type | M&nbsp;-&nbsp;ATK/HP | Keywords | Attribute | ' \
+                   'Rarity \n--|--|--|--|--|--|--\n'
 
         for name in cards:
             card = Card.get_info(name)
             if card is None:
-                boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0']
-                card = Card(name=name,
-                            img_url='http://imgur.com/1Lxy3DA',
-                            type='Typo',
-                            attribute=random.choice(boolshit_values),
-                            rarity=random.choice(boolshit_values),
-                            cost=random.choice(boolshit_values),
-                            power=random.choice(boolshit_values),
-                            health=random.choice(boolshit_values))
+                card = Card.get_random_card(name)
             response += '{}\n'.format(str(card))
 
-        response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed automagically._)' \
+        auto_word = random.choice(['automatically', 'automagically'])
+        response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
+                    'Special thanks to Jeremy at legends-decks._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
-                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(self.author)
+                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(auto_word, self.author)
         return response
 
     def log(self, msg):
