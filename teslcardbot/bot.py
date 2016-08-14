@@ -201,8 +201,8 @@ class TESLCardBot:
             response += '{}\n'.format(str(card))
 
         auto_word = random.choice(['automatically', 'automagically'])
-        response += '\n&nbsp;\n\n^_Did you know? Hover the camera emoji to read a card\'s text!_' \
-                    '\n\n(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
+        response += '\n&nbsp;\n\n_Did you know? Hover the camera emoji to read a card\'s text!_' \
+                    '\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
                     'Special thanks to Jeremy at legends-decks._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
                     '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(auto_word, self.author)
