@@ -32,7 +32,7 @@ class TestParsingFunctions(unittest.TestCase):
 
         self.assertEqual(str(Card.get_info('lesser ward')), '[📷](http://www.legends-decks.com/img_cards/'
                                                             'lesserward.png "Give a creature a Ward.") Lesser Ward | '
-                                                            'Action | 0 | None | Intelligence | Common')
+                                                            'Action | 0 - ?/? | None | Intelligence | Common')
 
     def test_extract_keywords(self):
         self.assertEqual(Card._extract_keywords('Charge'),['Charge'])
