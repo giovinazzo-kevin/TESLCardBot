@@ -145,7 +145,7 @@ class Card:
             url=self.img_url,
             type=self.type.title(),
             mana=self.cost,
-            stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
+            stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else '{} - ?/?'.format(self.cost),
             keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
             text=self.text if len(self.text) > 0 else 'This card\'s name isn\'t in the database. Possible typo?'
         )
@@ -191,7 +191,7 @@ class TESLCardBot:
 
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
-        response = 'Name | Type | M&nbsp;-&nbsp;ATK/HP | Keywords | Attribute | ' \
+        response = 'Name | Type | Stats | Keywords | Attribute | ' \
                    'Rarity \n--|--|--|--|--|--|--\n'
 
         for name in cards:
@@ -200,12 +200,14 @@ class TESLCardBot:
                 card = Card.get_random_card(name)
             response += '{}\n'.format(str(card))
 
+        did_you_know = random.choice(['Hover the camera emoji to read a card\'s text!'])
         auto_word = random.choice(['automatically', 'automagically'])
-        response += '\n&nbsp;\n\n**Did you know?** _Hover the camera emoji to read a card\'s text!_' \
+
+        response += '\n&nbsp;\n\n**Did you know?** _{}_' \
                     '\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
                     'Special thanks to Jeremy at legends-decks._)' \
-                    '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
-                    '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(auto_word, self.author)
+                    '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) | [Send PM](https://www.reddit.com/' \
+                    'message/compose/?to={})'.format(did_you_know, auto_word, self.author)
         return response
 
     def log(self, msg):
