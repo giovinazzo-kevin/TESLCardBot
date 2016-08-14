@@ -21,17 +21,18 @@ class TestParsingFunctions(unittest.TestCase):
 
     def test_get_info(self):
         Card.preload_card_data()
-        self.assertEqual(str(Card.get_info('tyr')), '[📖](https://www.reddit.com/message/compose/?'
-                                                    'subject=Prophecy%2C%20Breakthrough%2C%20Guard) '
-                                                    '[📷](http://www.legends-decks.com/img_cards/tyr.png) Tyr '
+
+        # print(str(Card.get_info('tyr')))
+        # print(str(Card.get_info('lesser ward')))
+
+        self.assertEqual(str(Card.get_info('tyr')), '[📷](http://www.legends-decks.com/img_cards/tyr.png "Prophecy, '
+                                                    'Breakthrough, Guard") Tyr '
                                                     '| Creature | 4 - 5/4 | Prophecy, Breakthrough, Guard '
                                                     '| Strength/Willpower | Legendary')
 
-        self.assertEqual(str(Card.get_info('lesser ward')), '[📖](https://www.reddit.com/message/compose/?'
-                                                            'subject=Give%20a%20creature%20a%20Ward.) '
-                                                            '[📷](http://www.legends-decks.com/img_cards/'
-                                                            'lesserward.png) Lesser Ward | Action | 0 | None | '
-                                                            'Intelligence | Common')
+        self.assertEqual(str(Card.get_info('lesser ward')), '[📷](http://www.legends-decks.com/img_cards/'
+                                                            'lesserward.png "Give a creature a Ward.") Lesser Ward | '
+                                                            'Action | 0 | None | Intelligence | Common')
 
     def test_extract_keywords(self):
         self.assertEqual(Card._extract_keywords('Charge'),['Charge'])
