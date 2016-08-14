@@ -75,7 +75,7 @@ class Card:
         i = 0
         matches = ['', '']
         while len(matches) > 1 and i <= Card.PARTIAL_MATCH_END_LENGTH:
-            matches = [s for s in Card.JSON_DATA if s['name'].lower().startswith(name[:i].lower())]
+            matches = [s for s in Card.JSON_DATA if Card._escape_name(s['name']).startswith(Card._escape_name(name[:i]))]
             i += 1
 
         return None if len(matches) == 0 else matches[0]

@@ -33,6 +33,7 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(Card._fetch_data_partial('lesser')['name'], 'Lesser Ward')
         self.assertEqual(Card._fetch_data_partial('gortwog')['name'], 'Gortwog gro-Nagorm')
         self.assertEqual(Card._fetch_data_partial('Breton Conjurer')['name'], 'Breton Conjurer')
+        self.assertEqual(Card._fetch_data_partial('quinrawl')['name'], 'Quin\'rawl Burglar')
 
     def test_get_info(self):
         Card.preload_card_data()
