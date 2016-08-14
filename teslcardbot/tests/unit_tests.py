@@ -6,6 +6,7 @@ class TestParsingFunctions(unittest.TestCase):
 
     def setUp(self):
         self.bot = TESLCardBot(author='TestParsingFunctions', target_sub='TESLCardBotTesting')
+        Card.preload_card_data()
 
     def test_find_card_mentions(self):
         # Make sure the basic functioning works
@@ -19,6 +20,20 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(Card._escape_name('Bl-ood, _-"\' Drag;on'), 'blooddragon')
         self.assertEqual(Card._escape_name('{{{HOHO}}}}}'), 'hoho')
 
+    def test_extract_keywords(self):
+        self.assertEqual(Card._extract_keywords('Charge'),['Charge'])
+        self.assertEqual(Card._extract_keywords('Charge, Pilfer'),['Charge', 'Pilfer'])
+        self.assertEqual(Card._extract_keywords('cHaRge. dRaIn'),['Charge', 'Drain'])
+        self.assertEqual(Card._extract_keywords('Summon: Ayy lmao'),['Summon'])
+        self.assertEqual(Card._extract_keywords('Charge. Last Gasp: rip 2016'),['Charge', 'Last Gasp'])
+        self.assertEqual(Card._extract_keywords('Summon: Summon a minion with Guard.'),['Summon'])
+
+    def test_fetch_data_partial(self):
+        self.assertEqual(Card._fetch_data_partial('tyr')['name'], 'Tyr')
+        self.assertEqual(Card._fetch_data_partial('lesser')['name'], 'Lesser Ward')
+        self.assertEqual(Card._fetch_data_partial('gortwog')['name'], 'Gortwog gro-Nagorm')
+        self.assertEqual(Card._fetch_data_partial('Breton Conjurer')['name'], 'Breton Conjurer')
+
     def test_get_info(self):
         Card.preload_card_data()
 
@@ -30,17 +45,9 @@ class TestParsingFunctions(unittest.TestCase):
                                                     '| Creature | 4 - 5/4 | Prophecy, Breakthrough, Guard '
                                                     '| Strength/Willpower | Legendary')
 
-        self.assertEqual(str(Card.get_info('lesser ward')), '[📷](http://www.legends-decks.com/img_cards/'
-                                                            'lesserward.png "Give a creature a Ward.") Lesser Ward | '
-                                                            'Action | 0 - ?/? | None | Intelligence | Common')
-
-    def test_extract_keywords(self):
-        self.assertEqual(Card._extract_keywords('Charge'),['Charge'])
-        self.assertEqual(Card._extract_keywords('Charge, Pilfer'),['Charge', 'Pilfer'])
-        self.assertEqual(Card._extract_keywords('cHaRge. dRaIn'),['Charge', 'Drain'])
-        self.assertEqual(Card._extract_keywords('Summon: Ayy lmao'),['Summon'])
-        self.assertEqual(Card._extract_keywords('Charge. Last Gasp: rip 2016'),['Charge', 'Last Gasp'])
-        self.assertEqual(Card._extract_keywords('Summon: Summon a minion with Guard.'),['Summon'])
+        self.assertEqual(str(Card.get_info('lesser w')), '[📷](http://www.legends-decks.com/img_cards/'
+                                                         'lesserward.png "Give a creature a Ward.") Lesser Ward | '
+                                                         'Action | 0 - ?/? | None | Intelligence | Common')
 
 
 if __name__ == '__main__':

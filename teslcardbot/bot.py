@@ -18,9 +18,10 @@ class Card:
     JSON_DATA = []
     KEYWORDS = ['Prophecy', 'Breakthrough', 'Guard', 'Regenerate', 'Charge', 'Ward', 'Shackle',
                 'Lethal', 'Pilfer', 'Last Gasp', 'Summon', 'Drain']
+    PARTIAL_MATCH_END_LENGTH = 20
 
     @staticmethod
-    def get_random_card(name):
+    def get_fake_card(name):
         boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0', '???', '!?']
 
         def rv(v=boolshit_values):
@@ -70,6 +71,16 @@ class Card:
         return remove_duplicates(keywords)
 
     @staticmethod
+    def _fetch_data_partial(name):
+        i = 0
+        matches = ['', '']
+        while len(matches) > 1 and i <= Card.PARTIAL_MATCH_END_LENGTH:
+            matches = [s for s in Card.JSON_DATA if s['name'].lower().startswith(name[:i].lower())]
+            i += 1
+
+        return None if len(matches) == 0 else matches[0]
+
+    @staticmethod
     def get_info(name):
         name = Card._escape_name(name)
 
@@ -85,13 +96,14 @@ class Card:
         # If JSON_DATA hasn't been populated yet, try to do it now or fail miserably.
         if len(Card.JSON_DATA) <= 0:
             Card.preload_card_data()
-            assert(len(Card.JSON_DATA) > 0)
+            assert (len(Card.JSON_DATA) > 0)
 
-        data = next((c for c in Card.JSON_DATA if Card._escape_name(c['name']) == name), None)
+        data = Card._fetch_data_partial(name)
+
         if data is None:
             return None
 
-        img_url = Card.CARD_IMAGE_BASE_URL.format(name)
+        img_url = Card.CARD_IMAGE_BASE_URL.format(Card._escape_name(data['name']))
         # Unlikely, but possible?
         if not Card._img_exists(img_url):
             img_url = Card.CARD_IMAGE_404_URL
@@ -144,7 +156,8 @@ class Card:
             url=self.img_url,
             type=self.type.title(),
             mana=self.cost,
-            stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else '{} - ?/?'.format(self.cost),
+            stats='{} - {}/{}'.format(self.cost, self.power,
+                                      self.health) if self.type == 'creature' else '{} - ?/?'.format(self.cost),
             keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
             text=self.text if len(self.text) > 0 else 'This card\'s name isn\'t in the database. Possible typo?'
         )
@@ -196,10 +209,11 @@ class TESLCardBot:
         for name in cards:
             card = Card.get_info(name)
             if card is None:
-                card = Card.get_random_card(name)
+                card = Card.get_fake_card(name)
             response += '{}\n'.format(str(card))
 
-        did_you_know = random.choice(['Hover the camera emoji to read a card\'s text!'])
+        did_you_know = random.choice(['You can hover the camera emoji to read a card\'s text!',
+                                      'I can do partial matches now!'])
         auto_word = random.choice(['automatically', 'automagically'])
 
         response += '\n**Did you know?** _{}_\n\n' \
@@ -229,7 +243,7 @@ class TESLCardBot:
             except praw.errors.HTTPException:
                 self.log('Reddit seems to be down! Aborting.')
                 return
-            
+
             for s in new_submissions:
                 self._process_submission(s)
                 # The bot will also save submissions it replies to to prevent double-posting.
