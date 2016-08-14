@@ -1,5 +1,4 @@
 import requests
-import urllib.parse
 import random
 import json
 import praw
