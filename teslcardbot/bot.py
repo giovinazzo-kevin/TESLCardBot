@@ -203,7 +203,7 @@ class TESLCardBot:
         did_you_know = random.choice(['Hover the camera emoji to read a card\'s text!'])
         auto_word = random.choice(['automatically', 'automagically'])
 
-        response += '\n&nbsp;\n\n**Did you know?** _{}_' \
+        response += '\n**Did you know?** _{}_\n\n' \
                     '\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
                     'Special thanks to Jeremy at legends-decks._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) | [Send PM](https://www.reddit.com/' \
