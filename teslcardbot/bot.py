@@ -135,7 +135,7 @@ class Card:
         self.keywords = Card._extract_keywords(text)
 
     def __str__(self):
-        template = '[📖](https://www.reddit.com/message/compose/?subject={enc_text}) [📷]({url}) {name} ' \
+        template = '[📷]({url} "{text}") {name} ' \
                    '| {type} | {stats} | {keywords} | {attrs} | {rarity}'
 
         return template.format(
@@ -147,8 +147,7 @@ class Card:
             mana=self.cost,
             stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
             keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
-            enc_text=urllib.parse.quote(self.text) if len(self.text) > 0 else 'This card\'s name isn\'t in '
-                                                                              'the database. Possible typo?'
+            text=self.text if len(self.text) > 0 else 'This card\'s name isn\'t in the database. Possible typo?'
         )
 
 
@@ -202,7 +201,8 @@ class TESLCardBot:
             response += '{}\n'.format(str(card))
 
         auto_word = random.choice(['automatically', 'automagically'])
-        response += '\n&nbsp;\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
+        response += '\n&nbsp;\n\n^_Did you know? Hover the camera emoji to read a card\'s text!_' \
+                    '\n\n(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
                     'Special thanks to Jeremy at legends-decks._)' \
                     '\n\n[Source Code](https://github.com/G3Kappa/TESLCardBot/) ' \
                     '| [Send PM](https://www.reddit.com/message/compose/?to={})'.format(auto_word, self.author)
