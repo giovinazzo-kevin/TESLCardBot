@@ -1,4 +1,5 @@
 import requests
+import urllib.parse
 import random
 import json
 import praw
@@ -134,8 +135,10 @@ class Card:
         self.keywords = Card._extract_keywords(text)
 
     def __str__(self):
+        template = '[📖](https://www.reddit.com/message/compose/?subject={enc_name}&body={enc_text})[📷]({url}) {name} ' \
+                   '| {type} | {stats} | {keywords} | {attrs} | {rarity}'
 
-        return '[📷]({url}) {name} | {type} | {stats} | {keywords} | {attrs} | {rarity}'.format(
+        return template.format(
             attrs='/'.join(map(str, self.attributes)),
             rarity=self.rarity.title(),
             name=self.name,
@@ -143,7 +146,9 @@ class Card:
             type=self.type.title(),
             mana=self.cost,
             stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
-            keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None'
+            keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
+            enc_name=urllib.parse.quote(self.name),
+            enc_text=urllib.parse.quote(self.text)
         )
 
 
