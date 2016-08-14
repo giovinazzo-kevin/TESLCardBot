@@ -147,7 +147,8 @@ class Card:
             mana=self.cost,
             stats='{} - {}/{}'.format(self.cost, self.power, self.health) if self.type == 'creature' else self.cost,
             keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
-            enc_text=urllib.parse.quote(self.text)
+            enc_text=urllib.parse.quote(self.text) if len(self.text) > 0 else 'This card\'s name isn\'t in '
+                                                                              'the database. Possible typo?'
         )
 
 
