@@ -183,22 +183,22 @@ class TESLCardBot:
                 response = self.build_response(cards)
                 s.add_comment(response)
                 s.save()
-                self.log('Done commenting and saved thread. ({})'.format(s.id))
+                self.log('Done commenting and saved thread.')
             except:
-                self.log('There was an error while trying to comment in: {}.'.format(s.id))
+                self.log('There was an error while trying to leave a comment.')
                 raise
 
     def _process_comment(self, c):
         cards = TESLCardBot.find_card_mentions(c.body)
         if len(cards) > 0 and not c.saved and c.author != os.environ['REDDIT_USERNAME']:
             try:
-                self.log('Replying to {} about the following cards: {}'.format(c.author, cards))
+                self.log('Replying to {} about the following cards: {}'.format(c.id, cards))
                 response = self.build_response(cards)
                 c.reply(response)
                 c.save()
-                self.log('Done replying and saved comment. ({})'.format(c.id))
+                self.log('Done replying and saved comment.')
             except:
-                self.log('There was an error while trying to reply to: {}.'.format(c.id))
+                self.log('There was an error while trying to reply.')
                 raise
 
     # TODO: Make this template-able, maybe?
