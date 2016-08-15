@@ -27,6 +27,7 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(Card._extract_keywords('Summon: Ayy lmao'),['Summon'])
         self.assertEqual(Card._extract_keywords('Charge. Last Gasp: rip 2016'),['Charge', 'Last Gasp'])
         self.assertEqual(Card._extract_keywords('Summon: Summon a minion with Guard.'),['Summon'])
+        self.assertEqual(Card._extract_keywords('Breakthrough, Charge, Last Gasp: Summon a meme'), ['Breakthrough', 'Charge', 'Last Gasp'])
 
     def test_fetch_data_partial(self):
         self.assertEqual(Card._fetch_data_partial('tyr')['name'], 'Tyr')

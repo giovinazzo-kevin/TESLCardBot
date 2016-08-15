@@ -58,7 +58,7 @@ class Card:
 
     @staticmethod
     def _extract_keywords(text):
-        expr = re.compile(r'(\w+(?:\sGasp)?)', re.I)
+        expr = re.compile(r'((?<!Gasp:\s)\w+(?:\sGasp)?)', re.I)
         words = expr.findall(text)
         # Keywords are extracted until a non-keyword word is found
         keywords = []
