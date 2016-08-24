@@ -223,8 +223,8 @@ class TESLCardBot:
             response = 'I\'m sorry, but none of the cards you mentioned were matched. ' \
                        'Tokens and other generated cards will be included soon.\n'
         elif len(cards_not_found) > 0:
-            response += '\nSome of the cards you mentioned were not matched: _{}._ ' \
-                        'Tokens and other generated cards will be included soon.\n'.format(', '.join(cards_not_found))
+            response += '\n^(Some of the cards you mentioned were not matched: _{}._ ' \
+                        'Tokens and other generated cards will be included soon.)\n'.format(', '.join(cards_not_found))
 
         response += '\n**Did you know?** _{}_\n\n' \
                     '\n\n&nbsp;\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
