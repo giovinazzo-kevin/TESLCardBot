@@ -25,6 +25,7 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(Card._extract_keywords('Charge, Pilfer'),['Charge', 'Pilfer'])
         self.assertEqual(Card._extract_keywords('cHaRge. dRaIn'),['Charge', 'Drain'])
         self.assertEqual(Card._extract_keywords('Summon: Ayy lmao'),['Summon'])
+        self.assertEqual(Card._extract_keywords('+4/+4 Summon: Destroy a bee.'),['Summon'])
         self.assertEqual(Card._extract_keywords('Charge. Last Gasp: rip 2016'),['Charge', 'Last Gasp'])
         self.assertEqual(Card._extract_keywords('Summon: Summon a minion with Guard.'),['Summon'])
         self.assertEqual(Card._extract_keywords('Breakthrough, Charge, Last Gasp: Summon a meme'), ['Breakthrough', 'Charge', 'Last Gasp'])
@@ -45,6 +46,7 @@ class TestParsingFunctions(unittest.TestCase):
 
         # print(str(Card.get_info('tyr')))
         # print(str(Card.get_info('lesser ward')))
+        # print(str(Card.get_info('dawnbreaker')))
 
         self.assertEqual(str(Card.get_info('tyr')), '[📷](http://www.legends-decks.com/img_cards/tyr.png "Prophecy, '
                                                     'Breakthrough, Guard") Tyr '
@@ -54,6 +56,10 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(str(Card.get_info('lesser w')), '[📷](http://www.legends-decks.com/img_cards/'
                                                          'lesserward.png "Give a creature a Ward.") Lesser Ward | '
                                                          'Action | 0 - ?/? | None | Intelligence | Common')
+
+        self.assertEqual(str(Card.get_info('dawnb')), '[📷](http://www.legends-decks.com/img_cards/dawnbreaker.png '
+                                                     '"+4/+4. Summon: Destroy an enemy Undead.") Dawnbreaker | Item | '
+                                                     '4 - +4/+4 | Summon | Willpower | Legendary')
 
 
 if __name__ == '__main__':

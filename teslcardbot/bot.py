@@ -59,6 +59,8 @@ class Card:
     @staticmethod
     def _extract_keywords(text):
         expr = re.compile(r'((?<!Gasp:\s)\w+(?:\sGasp)?)', re.I)
+        # If the card is an item, remove the +x/+y from its text.
+        text = re.sub(r'\+\d/\+\d', '', text)
         words = expr.findall(text)
         # Keywords are extracted until a non-keyword word is found
         keywords = []
@@ -126,6 +128,10 @@ class Card:
         if type == 'creature':
             power = int(data['attack'])
             health = int(data['health'])
+        elif type == 'item':
+            # Stats granted by items are extracted from their text
+            stats = re.findall(r'\+(\d)/\+(\d)', text)
+            power, health = stats[0]
 
         return Card(name=name,
                     img_url=img_url,
@@ -155,6 +161,14 @@ class Card:
         template = '[📷]({url} "{text}") {name} ' \
                    '| {type} | {stats} | {keywords} | {attrs} | {rarity}'
 
+        def _format_stats(t):
+            if self.type == 'creature':
+                return t.format(self.cost, self.power, self.health)
+            elif self.type == 'item':
+                return t.format(self.cost, '+{}'.format(self.power), '+{}'.format(self.health))
+            else:
+                return t.format(self.cost, '?', '?')
+
         return template.format(
             attrs='/'.join(map(str, self.attributes)),
             rarity=self.rarity.title(),
@@ -162,8 +176,7 @@ class Card:
             url=self.img_url,
             type=self.type.title(),
             mana=self.cost,
-            stats='{} - {}/{}'.format(self.cost, self.power,
-                                      self.health) if self.type == 'creature' else '{} - ?/?'.format(self.cost),
+            stats=_format_stats('{} - {}/{}'),
             keywords=', '.join(map(str, self.keywords)) + '' if len(self.keywords) > 0 else 'None',
             text=self.text if len(self.text) > 0 else 'This card\'s name isn\'t in the database. Possible typo?'
         )
