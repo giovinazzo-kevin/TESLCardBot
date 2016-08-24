@@ -21,25 +21,6 @@ class Card:
     PARTIAL_MATCH_END_LENGTH = 20
 
     @staticmethod
-    def get_fake_card(name):
-        boolshit_values = ['None', 'Undefined', 'Null', 'False', '💩', '#ERR', '0', '???', '!?']
-
-        def rv(v=boolshit_values):
-            if random.random() < 0.01:
-                return 'help'  # Not really
-            return random.choice(v)
-
-        return Card(name=name,
-                    img_url=Card.CARD_IMAGE_404_URL,
-                    type='Typo',
-                    attribute_1=rv(),
-                    attribute_2=rv() if random.random() < 0.5 else '',
-                    rarity=rv(),
-                    cost=rv(),
-                    power=rv(),
-                    health=rv())
-
-    @staticmethod
     def preload_card_data(path='data/cards.json'):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, path)
@@ -225,15 +206,21 @@ class TESLCardBot:
         response = 'Name | Type | Stats | Keywords | Attribute | ' \
                    'Rarity \n--|--|--|--|--|--|--\n'
 
+        cards_not_found = []
+
         for name in cards:
             card = Card.get_info(name)
             if card is None:
-                card = Card.get_fake_card(name)
-            response += '{}\n'.format(str(card))
+                cards_not_found.append(name)
+            else:
+                response += '{}\n'.format(str(card))
 
         did_you_know = random.choice(['You can hover the camera emoji to read a card\'s text!',
                                       'I can do partial matches now!'])
         auto_word = random.choice(['automatically', 'automagically'])
+
+        if len(cards_not_found) > 0:
+            response += '\n_Some of the cards you mentioned were not found: {}._\n'.format(', '.join(cards_not_found))
 
         response += '\n**Did you know?** _{}_\n\n' \
                     '\n\n&nbsp;\n\n^(_I am a bot, and this action was performed {}. Made by user G3Kappa. ' \
