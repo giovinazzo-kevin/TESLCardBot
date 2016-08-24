@@ -220,7 +220,7 @@ class TESLCardBot:
         auto_word = random.choice(['automatically', 'automagically'])
 
         if len(cards_not_found) == len(cards):
-            response = '_I\'m sorry, but none of the cards you mentioned were matched._'
+            response = '_I\'m sorry, but none of the cards you mentioned were matched.\n_'
         elif len(cards_not_found) > 0:
             response += '\n_Some of the cards you mentioned were not matched: {}._\n'.format(', '.join(cards_not_found))
 
