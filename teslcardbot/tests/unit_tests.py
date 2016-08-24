@@ -35,6 +35,10 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(Card._fetch_data_partial('gortwog')['name'], 'Gortwog gro-Nagorm')
         self.assertEqual(Card._fetch_data_partial('Breton Conjurer')['name'], 'Breton Conjurer')
         self.assertEqual(Card._fetch_data_partial('quinrawl')['name'], 'Quin\'rawl Burglar')
+        # Atronachs are not in the DB yet
+        # TODO: Remove when atronachs are in the DB
+        self.assertEqual(Card._fetch_data_partial('Storm Atronach'), None)
+        self.assertEqual(Card._fetch_data_partial('Storm')['name'], 'Stormhold Henchman')
 
     def test_get_info(self):
         Card.preload_card_data()

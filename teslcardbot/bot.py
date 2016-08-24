@@ -78,7 +78,13 @@ class Card:
             matches = [s for s in Card.JSON_DATA if Card._escape_name(s['name']).startswith(Card._escape_name(name[:i]))]
             i += 1
 
-        return None if len(matches) == 0 else matches[0]
+        if len(matches) == 0:
+            return None
+
+        match = matches[0]
+        if Card._escape_name(match['name'])[:len(name)] == Card._escape_name(name):
+            return match
+        return None
 
     @staticmethod
     def get_info(name):
