@@ -2921,7 +2921,7 @@
       "type":"creature",
       "attribute_1":"agility",
       "attribute_2":"",
-      "cost":"2",
+      "cost":"3",
       "attack":"2",
       "health":"2",
       "race":"goblin",
