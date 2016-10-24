@@ -216,7 +216,14 @@ class TESLCardBot:
                 response += '{}\n'.format(str(card))
 
         did_you_know = random.choice(['You can hover the camera emoji to read a card\'s text!',
-                                      'I can do partial matches now!'])
+                                      'I can do partial matches!',
+                                      'I was made in Python 🐍',
+                                      'My code is open-source and anyone can contribute to it.',
+                                      'I might hide a few easter eggs.',
+                                      'You can send your suggestions to my creator, no matter how insignificant.'
+                                      'Or you can open an issue on GitHub.',
+                                      'My author doesn\'t actively monitor this sub, or my replies, so PM him if you need anything.',
+                                      ])
         auto_word = random.choice(['automatically', 'automagically'])
 
         if len(cards_not_found) == len(cards):
