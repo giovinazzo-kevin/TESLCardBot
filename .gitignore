@@ -1,3 +1,4 @@
 .idea/
 teslcardbot/__pycache__/
 Procfile
+teslcardbot/data/*.old
