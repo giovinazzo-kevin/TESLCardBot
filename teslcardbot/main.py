@@ -1,4 +1,4 @@
-from teslcardbot.bot import TESLCardBot
+from bot import TESLCardBot
 from datetime import datetime, timedelta
 import argparse
 

@@ -139,8 +139,8 @@ class Card:
         self.keywords = Card._extract_keywords(text)
 
     def __str__(self):
-        template = '[📷]({url} "{text}") {name} ' \
-                   '| {type} | {stats} | {keywords} | {attrs} | {rarity}'
+        template = '[📷]({url}) {name} ' \
+                   '| {type} | {stats} | {keywords} | {attrs} | {rarity} | {text}'
 
         def _format_stats(t):
             if self.type == 'creature':
@@ -204,7 +204,7 @@ class TESLCardBot:
     # TODO: Make this template-able, maybe?
     def build_response(self, cards):
         response = 'Name | Type | Stats | Keywords | Attribute | ' \
-                   'Rarity \n--|--|--|--|--|--|--\n'
+                   'Rarity | Text \n--|--|--|--|--|--|--|--\n'
 
         cards_not_found = []
 
