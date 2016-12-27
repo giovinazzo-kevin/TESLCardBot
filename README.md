@@ -11,7 +11,7 @@ export REDDIT_USERNAME=<your_reddit_username>
 export REDDIT_PASSWORD=<reddit_username_password>
 
 Run with:
-python teslcardbot/main.py --target_sub <reddit_thread_to_watch>
+python teslcardbot/main.py --target_sub <subreddit_to_watch>
 
 #Contributing
 Feel free to contribute! Any pull request is welcome, just remember to add your name to *CONTRIBUTORS.md*.
