@@ -102,7 +102,7 @@ class Card:
         attr_1 = data['attribute_1']
         attr_2 = data['attribute_2']
         rarity = data['rarity']
-        unique = data['isUnique'] == 'true'
+        unique = data['isunique'] == 'true'
         cost = int(data['cost'])
         text = data['text']
         power = ''
