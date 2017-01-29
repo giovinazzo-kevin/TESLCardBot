@@ -461,7 +461,7 @@
     "type":"creature",
     "attribute_1":"endurance",
     "attribute_2":"",
-    "cost":"5",
+    "cost":"6",
     "attack":"4",
     "health":"4",
     "race":"imperial",
@@ -833,7 +833,7 @@
   },
   {
     "name":"Close Call",
-    "rarity":"Common",
+    "rarity":"Rare",
     "isunique":"false",
     "type":"action",
     "attribute_1":"neutral",
@@ -930,8 +930,8 @@
     "attribute_1":"intelligence",
     "attribute_2":"",
     "cost":"2",
-    "attack":"2",
-    "health":"2",
+    "attack":"1",
+    "health":"1",
     "race":"highelf",
     "text":"When you play an action, Crystal Tower Crafter gets +1\/+1."
   },
@@ -1009,7 +1009,7 @@
     "attribute_2":"",
     "cost":"5",
     "attack":"4",
-    "health":"4",
+    "health":"5",
     "race":"khajiit",
     "text":"Pilfer: Draw a random support from your deck."
   },
@@ -1046,7 +1046,7 @@
     "type":"support",
     "attribute_1":"intelligence",
     "attribute_2":"",
-    "cost":"2",
+    "cost":"3",
     "attack":"0",
     "health":"0",
     "race":"",
@@ -1375,7 +1375,7 @@
     "attack":"3",
     "health":"1",
     "race":"khajiit",
-    "text":"Summon: Move another friendly creature. When a friendly creature moves, give it +1\/+1."
+    "text":"Summon: Move another friendly creature in this lane. When a friendly creature moves, give it +1\/+1."
   },
   {
     "name":"Dune Stalker",
@@ -1388,7 +1388,7 @@
     "attack":"3",
     "health":"1",
     "race":"khajiit",
-    "text":"Prophecy. Summon: Move another friendly creature."
+    "text":"Prophecy. Summon: Move another friendly creature in this lane."
   },
   {
     "name":"Dunmer Nightblade",
@@ -2008,7 +2008,7 @@
     "type":"support",
     "attribute_1":"strength",
     "attribute_2":"",
-    "cost":"3",
+    "cost":"4",
     "attack":"0",
     "health":"0",
     "race":"",
@@ -2389,7 +2389,7 @@
     "attack":"0",
     "health":"0",
     "race":"",
-    "text":"Summon: +1 max magicka.\r\nWhen you have 15 or more max magicka, sacrifice this to summon an 8\/8 Swamp Leviathan in each lane."
+    "text":"Summon: +1 max magicka.\r\nAt the start of your turn, if you have 15 or more max magicka, sacrifice this to summon an 8\/8 Swamp Leviathan in each lane."
   },
   {
     "name":"Hist Speaker",
@@ -3676,7 +3676,7 @@
     "attack":"5",
     "health":"4",
     "race":"imperial",
-    "text":"Summon: Give friendly creatures in this lane Drain this turn."
+    "text":"Summon: Give a friendly creature Drain this turn."
   },
   {
     "name":"Pit Lion",
@@ -3946,7 +3946,7 @@
     "attribute_1":"strength",
     "attribute_2":"",
     "cost":"4",
-    "attack":"2",
+    "attack":"3",
     "health":"5",
     "race":"daedra",
     "text":"When Reive attacks, deal 2 damage to the enemy player, then increase the damage from this ability by 2."
@@ -4324,7 +4324,7 @@
     "attribute_2":"",
     "cost":"2",
     "attack":"2",
-    "health":"2",
+    "health":"1",
     "race":"harpy",
     "text":"Prophecy. Summon: Shackle an enemy creature."
   },
@@ -4439,7 +4439,7 @@
     "type":"creature",
     "attribute_1":"neutral",
     "attribute_2":"",
-    "cost":"3",
+    "cost":"4",
     "attack":"1",
     "health":"1",
     "race":"fish",
@@ -4452,7 +4452,7 @@
     "type":"action",
     "attribute_1":"neutral",
     "attribute_2":"",
-    "cost":"3",
+    "cost":"4",
     "attack":"0",
     "health":"0",
     "race":"",
@@ -4482,7 +4482,7 @@
     "attack":"0",
     "health":"0",
     "race":"",
-    "text":"Drain. +1\/+1"
+    "text":"+1\/+1. Summon: Give the wielder Drain this turn."
   },
   {
     "name":"Snapping Dreugh",
@@ -4524,6 +4524,19 @@
     "text":"Can attack an additional time on each turn. "
   },
   {
+    "name":"Stampede Sentinel",
+    "rarity":"Epic",
+    "isunique":"false",
+    "type":"creature",
+    "attribute_1":"strength",
+    "attribute_2":"",
+    "cost":"6",
+    "attack":"7",
+    "health":"7",
+    "race":"giant",
+    "text":"Breakthrough. You can't be damaged by actions or supports."
+  },
+  {
     "name":"Soul Split",
     "rarity":"Common",
     "isunique":"false",
@@ -4543,11 +4556,11 @@
     "type":"creature",
     "attribute_1":"agility",
     "attribute_2":"",
-    "cost":"5",
+    "cost":"6",
     "attack":"4",
     "health":"4",
     "race":"argonian",
-    "text":"Summon: If you have more health than your opponent, the next card you play this turn costs 5 less."
+    "text":"Summon: If you have more health than your opponent, the next card you play this turn costs 6 less."
   },
   {
     "name":"Sparking Spider",
@@ -5168,7 +5181,7 @@
     "attribute_1":"agility",
     "attribute_2":"",
     "cost":"1",
-    "attack":"2",
+    "attack":"1",
     "health":"1",
     "race":"woodelf",
     "text":"Summon: Shuffle three Brotherhood Assassins into your deck."
