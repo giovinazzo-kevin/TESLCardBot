@@ -251,8 +251,9 @@ class TESLCardBot:
         r = None
         try:
             r = self._get_praw_instance()
-        except praw.errors.HTTPException:
+        except praw.errors.HTTPException as e:
             self.log('Reddit seems to be down! Aborting.')
+            self.log(e)
             return
 
         already_done = []
@@ -261,8 +262,9 @@ class TESLCardBot:
             try:
                 new_submissions = [s for s in subreddit.get_new(limit=batch_limit) if s.id not in already_done]
                 new_comments = [c for c in r.get_comments(subreddit) if c.id not in already_done]
-            except praw.errors.HTTPException:
+            except praw.errors.HTTPException as e:
                 self.log('Reddit seems to be down! Aborting.')
+                self.log(e)
                 return
 
             for s in new_submissions:
