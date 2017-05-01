@@ -6161,5 +6161,18 @@
     "health": "6",
     "race": "imperial",
     "text": "After you play an action, put a random action into your hand."
+  },
+  {
+    "name": "Chaurus Breeding Pit",
+    "rarity": "Epic",
+    "isunique": false,
+    "type": "action",
+    "attribute_1": "agility",
+    "attribute_2": "",
+    "cost": "10",
+    "attack": "0",
+    "health": "0",
+    "race": "",
+    "text": "Summon a Chaurus Reaper in each lane."
   }
 ]
