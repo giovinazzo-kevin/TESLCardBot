@@ -1,5 +1,4 @@
 from teslcardbot.bot import TESLCardBot
-from datetime import datetime, timedelta
 import argparse
 
 if __name__ == '__main__':

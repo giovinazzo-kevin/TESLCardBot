@@ -102,6 +102,7 @@ class Card:
         attr_1 = data['attribute_1']
         attr_2 = data['attribute_2']
         rarity = data['rarity']
+        unique = data['isunique'] == 'true'
         cost = int(data['cost'])
         text = data['text']
         power = ''
@@ -120,18 +121,20 @@ class Card:
                     attribute_1=attr_1,
                     attribute_2=attr_2,
                     rarity=rarity,
+                    unique=unique,
                     cost=cost,
                     power=power,
                     health=health,
                     text=text)
 
     def __init__(self, name, img_url, type='Creature', attribute_1='neutral',
-                 attribute_2='', text='', rarity='Common', cost=0, power=0, health=0):
+                 attribute_2='', text='', rarity='Common', unique=False, cost=0, power=0, health=0):
         self.name = name
         self.img_url = img_url
         self.type = type
         self.attributes = [attribute_1.title(), attribute_2.title()] if len(attribute_2) > 0 else [attribute_1.title()]
         self.rarity = rarity
+        self.unique = unique
         self.cost = cost
         self.power = power
         self.health = health
@@ -140,7 +143,7 @@ class Card:
 
     def __str__(self):
         template = '[📷]({url} "{text}") {name} ' \
-                   '| {type} | {stats} | {keywords} | {attrs} | {rarity}'
+                   '| {type} | {stats} | {keywords} | {attrs} | {unique}{rarity}'
 
         def _format_stats(t):
             if self.type == 'creature':
@@ -152,6 +155,7 @@ class Card:
 
         return template.format(
             attrs='/'.join(map(str, self.attributes)),
+            unique='' if not self.unique else 'Unique ',
             rarity=self.rarity.title(),
             name=self.name,
             url=self.img_url,
@@ -220,7 +224,7 @@ class TESLCardBot:
                                       'I was made in Python 🐍',
                                       'My code is open-source and anyone can contribute to it.',
                                       'I might hide a few easter eggs.',
-                                      'You can send your suggestions to my creator, no matter how insignificant.'
+                                      'You can send your suggestions to my creator, no matter how insignificant. '
                                       'Or you can open an issue on GitHub.',
                                       'My author doesn\'t actively monitor this sub, or my replies, so PM him if you need anything.',
                                       ])
@@ -247,8 +251,9 @@ class TESLCardBot:
         r = None
         try:
             r = self._get_praw_instance()
-        except praw.errors.HTTPException:
+        except praw.errors.HTTPException as e:
             self.log('Reddit seems to be down! Aborting.')
+            self.log(e)
             return
 
         already_done = []
@@ -257,8 +262,9 @@ class TESLCardBot:
             try:
                 new_submissions = [s for s in subreddit.get_new(limit=batch_limit) if s.id not in already_done]
                 new_comments = [c for c in r.get_comments(subreddit) if c.id not in already_done]
-            except praw.errors.HTTPException:
+            except praw.errors.HTTPException as e:
                 self.log('Reddit seems to be down! Aborting.')
+                self.log(e)
                 return
 
             for s in new_submissions:
