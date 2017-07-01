@@ -51,7 +51,7 @@ class TestParsingFunctions(unittest.TestCase):
         self.assertEqual(str(Card.get_info('tyr')), '[📷](http://www.legends-decks.com/img_cards/tyr.png "Prophecy, '
                                                     'Breakthrough, Guard") Tyr '
                                                     '| Creature | 4 - 5/4 | Prophecy, Breakthrough, Guard '
-                                                    '| Strength/Willpower | Legendary')
+                                                    '| Strength/Willpower | Unique Legendary')
 
         self.assertEqual(str(Card.get_info('lesser w')), '[📷](http://www.legends-decks.com/img_cards/'
                                                          'lesserward.png "Give a creature a Ward.") Lesser Ward | '
@@ -59,7 +59,7 @@ class TestParsingFunctions(unittest.TestCase):
 
         self.assertEqual(str(Card.get_info('dawnb')), '[📷](http://www.legends-decks.com/img_cards/dawnbreaker.png '
                                                      '"+4/+4. Summon: Destroy an enemy Undead.") Dawnbreaker | Item | '
-                                                     '4 - +4/+4 | Summon | Willpower | Legendary')
+                                                     '4 - +4/+4 | Summon | Willpower | Unique Legendary')
 
 
 if __name__ == '__main__':
