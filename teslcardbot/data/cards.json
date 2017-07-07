@@ -127,7 +127,7 @@
         "attack": "2",
         "health": "5",
         "race": "dwemer",
-        "text": "When Ageless Automaton attacks a Guard, it gains +3/+0 and Breakthrough this�turn."
+        "text": "When Ageless Automaton attacks a Guard, it gains +3/+0 and Breakthrough this turn."
         },
         {
         "name": "Ahnassi",
@@ -153,7 +153,7 @@
         "attack": "1",
         "health": "2",
         "race": "highelf",
-        "text": "Summon: +1/+1 if you have an action in your�hand."
+        "text": "Summon: +1/+1 if you have an action in your hand."
         },
         {
         "name": "Alduin",
@@ -179,7 +179,7 @@
         "attack": "3",
         "health": "4",
         "race": "redguard",
-        "text": "When Alik'r Bandit equips an item, he gains�+1/+1."
+        "text": "When Alik'r Bandit equips an item, he gains +1/+1."
         },
         {
         "name": "Alik'r Survivalist",
@@ -192,7 +192,7 @@
         "attack": "3",
         "health": "4",
         "race": "redguard",
-        "text": "Summon: Put a Steel Dagger into your hand. When Alik'r Survivalist equips an item, he gains�+1/+1."
+        "text": "Summon: Put a Steel Dagger into your hand. When Alik'r Survivalist equips an item, he gains +1/+1."
         },
         {
         "name": "Allena Benoch",
@@ -842,7 +842,7 @@
         "attack": "5",
         "health": "7",
         "race": "dragon",
-        "text": "Ignores Guards and may attack creatures in any�lane."
+        "text": "Ignores Guards and may attack creatures in any lane."
         },
         {
         "name": "Blood Magic Lord",
@@ -1050,7 +1050,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Deal 1 damage to all enemy creatures in a lane for each destroyed enemy�rune."
+        "text": "Deal 1 damage to all enemy creatures in a lane for each destroyed enemy rune."
         },
         {
         "name": "Call of Valor",
@@ -1596,7 +1596,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Give a creature +2/+0, Breakthrough and �Slay and Pilfer: Draw a card� this turn."
+        "text": "Give a creature +2/+0, Breakthrough and  Slay and Pilfer: Draw a card  this turn."
         },
         {
         "name": "Crushing Blow",
@@ -1635,7 +1635,7 @@
         "attack": "3",
         "health": "3",
         "race": "darkelf",
-        "text": "Summon: Put a Firebolt into your hand if the top card of your deck is�(Intelligence)."
+        "text": "Summon: Put a Firebolt into your hand if the top card of your deck is (Intelligence)."
         },
         {
         "name": "Curse",
@@ -1908,7 +1908,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Sacrifice a creature to summon a random creature that costs 2�more."
+        "text": "Sacrifice a creature to summon a random creature that costs 2 more."
         },
         {
         "name": "Detain",
@@ -2051,7 +2051,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": " Summon: Trigger the wielder�s summon ability."
+        "text": " Summon: Trigger the wielder s summon ability."
         },
         {
         "name": "Dragonplate Armor",
@@ -2090,7 +2090,7 @@
         "attack": "3",
         "health": "3",
         "race": "redguard",
-        "text": "When Dragonstar Rider equips an item, draw a�card."
+        "text": "When Dragonstar Rider equips an item, draw a card."
         },
         {
         "name": "Dragontail Savior",
@@ -2155,7 +2155,7 @@
         "attack": "5",
         "health": "5",
         "race": "daedra",
-        "text": "Guard Summon: Double a creature's power and�health."
+        "text": "Guard Summon: Double a creature's power and health."
         },
         {
         "name": "Dres Guard",
@@ -3065,7 +3065,7 @@
         "attack": "4",
         "health": "5",
         "race": "orc",
-        "text": "Breakthrough Players can�t have more than 7 magicka."
+        "text": "Breakthrough Players can t have more than 7 magicka."
         },
         {
         "name": "General Tullius",
@@ -3117,7 +3117,7 @@
         "attack": "3",
         "health": "3",
         "race": "reptile",
-        "text": "Summon: Shackle all enemy creatures in this�lane."
+        "text": "Summon: Shackle all enemy creatures in this lane."
         },
         {
         "name": "Gladiator Arena",
@@ -3624,7 +3624,7 @@
         "attack": "5",
         "health": "5",
         "race": "breton",
-        "text": "Ward Summon: Deal 2 damage for each friendly creature with a�Ward."
+        "text": "Ward Summon: Deal 2 damage for each friendly creature with a Ward."
         },
         {
         "name": "High Rock Summoner",
@@ -4534,7 +4534,7 @@
         "attack": "6",
         "health": "6",
         "race": "mantikora",
-        "text": "Guard Summon: Destroy an enemy creature in this�lane."
+        "text": "Guard Summon: Destroy an enemy creature in this lane."
         },
         {
         "name": "Maple Shield",
@@ -4560,7 +4560,7 @@
         "attack": "4",
         "health": "4",
         "race": "nord",
-        "text": "When Markarth Bannerman attacks, put two 1/1 Nord Firebrands with Charge into your�hand."
+        "text": "When Markarth Bannerman attacks, put two 1/1 Nord Firebrands with Charge into your hand."
         },
         {
         "name": "Marked Man",
@@ -5340,7 +5340,7 @@
         "attack": "2",
         "health": "2",
         "race": "wolf",
-        "text": "Summon: Summon a 1/1 Young Wolf in the other�lane."
+        "text": "Summon: Summon a 1/1 Young Wolf in the other lane."
         },
         {
         "name": "Pahmar-raht Renegade",
@@ -5925,7 +5925,7 @@
         "attack": "2",
         "health": "2",
         "race": "darkelf",
-        "text": "Summon: Reveal three random cards in your opponent�s deck. Choose one and draw a copy of it."
+        "text": "Summon: Reveal three random cards in your opponent s deck. Choose one and draw a copy of it."
         },
         {
         "name": "Riften Pillager",
@@ -5938,7 +5938,7 @@
         "attack": "2",
         "health": "3",
         "race": "nord",
-        "text": "Summon: +1/+1 for each destroyed enemy�rune."
+        "text": "Summon: +1/+1 for each destroyed enemy rune."
         },
         {
         "name": "Rihad Battlemage",
@@ -6107,7 +6107,7 @@
         "attack": "5",
         "health": "5",
         "race": "ogre",
-        "text": "Summon: Give a creature +5/+0 this�turn."
+        "text": "Summon: Give a creature +5/+0 this turn."
         },
         {
         "name": "Scouting Patrol",
@@ -6419,7 +6419,7 @@
         "attack": "3",
         "health": "1",
         "race": "woodelf",
-        "text": "Summon: Gains Charge if there is a Wounded enemy creature in this�lane."
+        "text": "Summon: Gains Charge if there is a Wounded enemy creature in this lane."
         },
         {
         "name": "Skaven Pyromancer",
@@ -6588,7 +6588,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Summon a Slaughterfish in each�lane."
+        "text": "Summon a Slaughterfish in each lane."
         },
         {
         "name": "Smuggler's Haul",
@@ -7030,7 +7030,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Destroy an enemy creature if you have a creature with higher�power."
+        "text": "Destroy an enemy creature if you have a creature with higher power."
         },
         {
         "name": "Stonehill Mammoth",
@@ -7420,7 +7420,7 @@
         "attack": "3",
         "health": "2",
         "race": "darkelf",
-        "text": "Last Gasp: Put a random action into your�hand."
+        "text": "Last Gasp: Put a random action into your hand."
         },
         {
         "name": "Tenmar Swiftclaw",
@@ -7459,7 +7459,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Your High Elves cost 1 less. You can�t be damaged by actions."
+        "text": "Your High Elves cost 1 less. You can t be damaged by actions."
         },
         {
         "name": "Thalmor Justiciar",
@@ -7498,7 +7498,7 @@
         "attack": "5",
         "health": "5",
         "race": "imperial",
-        "text": "Immune to Lethal. Slay: Discard all copies of the slain creature from the opponent�s deck."
+        "text": "Immune to Lethal. Slay: Discard all copies of the slain creature from the opponent s deck."
         },
         {
         "name": "The Night Mother",
@@ -7602,7 +7602,7 @@
         "attack": "2",
         "health": "5",
         "race": "argonian",
-        "text": "Guard Summon: Gain +1 max�magicka. Gains +1/+0 when your max magicka increases."
+        "text": "Guard Summon: Gain +1 max magicka. Gains +1/+0 when your max magicka increases."
         },
         {
         "name": "Tome of Alteration",
@@ -7680,7 +7680,7 @@
         "attack": "4",
         "health": "4",
         "race": "nord",
-        "text": "Summon: If you have more health than your opponent, draw two�cards."
+        "text": "Summon: If you have more health than your opponent, draw two cards."
         },
         {
         "name": "Tusked Bristleback",
@@ -7719,7 +7719,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "If your opponent doesn�t damage you on their turn, sacrifice this and summon a Priest of the Moons in each lane."
+        "text": "If your opponent doesn t damage you on their turn, sacrifice this and summon a Priest of the Moons in each lane."
         },
         {
         "name": "Tyr",
@@ -7992,7 +7992,7 @@
         "attack": "0",
         "health": "0",
         "race": "",
-        "text": "Give friendly creatures in a lane +2/+0 this�turn."
+        "text": "Give friendly creatures in a lane +2/+0 this turn."
         },
         {
         "name": "Wardcrafter",
@@ -8317,7 +8317,7 @@
         "attack": "5",
         "health": "6",
         "race": "spirit",
-        "text": "Summon: Your opponent�s cards cost 1 more next turn."
+        "text": "Summon: Your opponent s cards cost 1 more next turn."
         },
         {
         "name": "Wrothgar Artisan",
