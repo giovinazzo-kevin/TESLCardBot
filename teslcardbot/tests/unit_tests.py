@@ -48,18 +48,17 @@ class TestParsingFunctions(unittest.TestCase):
         # print(str(Card.get_info('lesser ward')))
         # print(str(Card.get_info('dawnbreaker')))
 
-        self.assertEqual(str(Card.get_info('tyr')), '[📷](http://www.legends-decks.com/img_cards/tyr.png "Prophecy, '
-                                                    'Breakthrough, Guard") Tyr '
+        self.assertEqual(str(Card.get_info('tyr')), '[📷](http://www.legends-decks.com/img_cards/tyr.png) Tyr '
                                                     '| Creature | 4 - 5/4 | Prophecy, Breakthrough, Guard '
-                                                    '| Strength/Willpower | Unique Legendary')
+                                                    '| Strength/Willpower | Unique Legendary | Prophecy, Breakthrough, Guard')
 
         self.assertEqual(str(Card.get_info('lesser w')), '[📷](http://www.legends-decks.com/img_cards/'
-                                                         'lesserward.png "Give a creature a Ward.") Lesser Ward | '
-                                                         'Action | 0 - ?/? | None | Intelligence | Common')
+                                                         'lesserward.png) Lesser Ward | Action | 0 - ?/? | None '
+                                                         '| Intelligence | Common | Give a creature a Ward.')
 
-        self.assertEqual(str(Card.get_info('dawnb')), '[📷](http://www.legends-decks.com/img_cards/dawnbreaker.png '
-                                                     '"+4/+4. Summon: Destroy an enemy Undead.") Dawnbreaker | Item | '
-                                                     '4 - +4/+4 | Summon | Willpower | Unique Legendary')
+        self.assertEqual(str(Card.get_info('dawnb')), '[📷](http://www.legends-decks.com/img_cards/dawnbreaker.png) '
+                                                     'Dawnbreaker | Item | 4 - +4/+4 | Summon | Willpower '
+                                                     '| Unique Legendary | +4/+4. Summon: Destroy an enemy Undead.')
 
 
 if __name__ == '__main__':
